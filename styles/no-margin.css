@@ -1,0 +1,5 @@
+/* Margins are manually set by user settings `markdown-pdf.margin.*`. */
+body {
+  margin: 0px;
+  padding: 0px;
+}

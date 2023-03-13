@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'Minion Pro';
+  src: url(fonts/MinionPro-Bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Minion Pro';
+  src: url(fonts/MinionPro-BoldCondensed.otf);
+  font-weight: bold;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: 'Minion Pro';
+  src: url(fonts/MinionPro-BoldCondensedItalic.otf);
+  font-weight: bold;
+  font-stretch: condensed;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Minion Pro';
+  src: url(fonts/MinionPro-BoldItalic.otf);
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Minion Pro';
+  src: url(fonts/MinionPro-Italic.otf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Minion Pro';
+  src: url(fonts/MinionPro-Medium.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Minion Pro';
+  src: url(fonts/MinionPro-MediumItalic.otf);
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Minion Pro';
+  src: url(fonts/MinionPro-Regular.otf);
+}
+
+@font-face {
+  font-family: 'Minion Pro';
+  src: url(fonts/MinionPro-Semibold.otf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Minion Pro';
+  src: url(fonts/MinionPro-SemiboldItalic.otf);
+  font-weight: 600;
+  font-style: italic;
+}
+
+* {
+  line-height: 1.2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Minion Pro';
+}
+
+body {
+  font-family: 'Minion Pro';
+}

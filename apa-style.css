@@ -1,0 +1,18 @@
+/* https://apastyle.apa.org/style-grammar-guidelines/paper-format/ */
+
+@import 'styles/academic.css';
+@import 'styles/no-margin.css';
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial;
+  font-size: 12pt;
+}
+
+body {
+  font-family: Arial;
+  font-size: 11pt;
+}
+
+code {
+	font-family: 'Courier New', monospace;
+}

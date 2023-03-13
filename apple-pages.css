@@ -1,0 +1,80 @@
+@import 'styles/no-margin.css';
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url(fonts/HelveticaNeue-Bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url(fonts/HelveticaNeue-Italic.otf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url(fonts/HelveticaNeue-Light.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url(fonts/HelveticaNeue-Medium.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url(fonts/HelveticaNeue-Regular.otf);
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url(fonts/HelveticaNeue-Thin.otf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url(fonts/HelveticaNeue-Ultralight.otf);
+  font-weight: 50;
+}
+
+* {
+  line-height: 1.0;
+}
+
+h1 {
+  font-family: 'Helvetica Neue';
+  font-size: 30pt;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: 'Helvetica Neue';
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: 'Helvetica Neue';
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+h4 {
+  font-family: 'Helvetica Neue';
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+h5 {
+  font-family: 'Helvetica Neue';
+  font-size: 14pt;
+}
+
+body {
+  font-family: 'Helvetica';
+  font-size: 11pt;
+}
