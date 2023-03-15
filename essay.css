@@ -1,0 +1,54 @@
+/** https://fonts.cdnfonts.com/css/baskerville */
+@font-face{font-family:baskerville;font-style:normal;font-weight:400;src:local('Baskerville'),url(https://fonts.cdnfonts.com/s/14899/baskvl.woff) format('woff')}@font-face{font-family:baskerville;font-style:normal;font-weight:5;src:local('Baskerville'),url(https://fonts.cdnfonts.com/s/14899/baskervi.woff) format('woff')}@font-face{font-family:baskerville;font-style:normal;font-weight:300;src:local('Baskerville'),url(https://fonts.cdnfonts.com/s/14899/BASKE10.woff) format('woff')}@font-face{font-family:baskerville;font-style:normal;font-weight:300;src:local('Baskerville'),url(https://fonts.cdnfonts.com/s/14899/BASKE9.woff) format('woff')}@font-face{font-family:baskerville;font-style:normal;font-weight:300;src:local('Baskerville'),url(https://fonts.cdnfonts.com/s/14899/BASKRV_L.woff) format('woff')}@font-face{font-family:baskerville;font-style:normal;font-weight:700;src:local('Baskerville'),url(https://fonts.cdnfonts.com/s/14899/BASKE1.woff) format('woff')}@font-face{font-family:baskerville;font-style:normal;font-weight:700;src:local('Baskerville'),url('https://fonts.cdnfonts.com/s/14899/Baskerville Bold font.woff') format('woff')}@font-face{font-family:baskerville bt;font-style:normal;font-weight:400;src:local('Baskerville BT'),url(https://fonts.cdnfonts.com/s/14899/BaskervilleBT.woff) format('woff')}@font-face{font-family:baskerville bt;font-style:italic;font-weight:400;src:local('Baskerville BT'),url(https://fonts.cdnfonts.com/s/14899/BaskervilleItalicBT.woff) format('woff')}@font-face{font-family:baskerville bt;font-style:normal;font-weight:700;src:local('Baskerville BT'),url(https://fonts.cdnfonts.com/s/14899/BaskervilleBoldBT.woff) format('woff')}@font-face{font-family:baskerville bt;font-style:normal;font-weight:700;src:local('Baskerville BT'),url('https://fonts.cdnfonts.com/s/14899/baskerville bold bt.woff') format('woff')}@font-face{font-family:baskerville bt;font-style:italic;font-weight:700;src:local('Baskerville BT'),url(https://fonts.cdnfonts.com/s/14899/BaskervilleBoldItalicBT.woff) format('woff')}
+
+@import 'styles/no-margin.css';
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: baskerville;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  line-height: 1.0;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 40pt;
+  color: #3b3b3b;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 32pt;
+  color: #fff;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 32pt;
+  color: #df4b2c;
+}
+
+h4 {
+  font-weight: normal;
+  font-size: 13pt;
+  color: #000;
+}
+
+h5 {
+  font-weight: normal;
+  font-size: 18pt;
+  color: #514e4b;
+}
+
+h6 {
+  font-weight: normal;
+  font-size: 18pt;
+  color: #543a29;
+}
+
+body {
+  font-family: baskerville;
+  font-weight: normal;
+  font-size: 12pt;
+  line-height: 1.5;
+}

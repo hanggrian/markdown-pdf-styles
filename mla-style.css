@@ -1,14 +1,14 @@
-/* https://style.mla.org/mla-format/ */
-
 @import 'styles/academic.css';
 @import 'styles/no-margin.css';
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Times New Roman';
+  font-weight: bold;
   font-size: 12pt;
 }
 
 body {
   font-family: 'Times New Roman';
+  font-weight: normal;
   font-size: 12pt;
 }
