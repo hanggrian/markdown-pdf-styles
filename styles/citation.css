@@ -1,8 +1,3 @@
-/* APA and MLA require double-spacing lines. */
-* {
-  line-height: 2.0;
-}
-
 /*
 Academic citation requires superscript numbered link (e.g.: `[1]`, `[2]`, etc.). The problem with
 HTML `sup` tag is that they affect line height of `p`, this style disables it.
