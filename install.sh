@@ -59,16 +59,17 @@ patch() {
 echo
 echo "$BOLD${UNDERLINE}Markdown PDF Styles$END"
 echo
-echo "1. Essay"
-echo "2. Business"
-echo "3. Adobe Acrobat"
-echo "4. Microsoft Word"
-echo "5. Apple Pages"
-echo "6. APA Style"
-echo "7. MLA Style"
+echo "1. Google - Noto Sans"
+echo "2. Google - Noto Serif"
+echo "3. Application - Microsoft Word"
+echo "4. Application - Apple Pages"
+echo "5. Colorful - Essay"
+echo "6. Colorful - Business"
+echo "7. Academic - APA Style"
+echo "8. Academic - MLA Style"
 echo
 echo "D. Default"
-echo "C. Clear"
+echo "R. Reset"
 echo
 echo "Q. Quit"
 echo
@@ -76,7 +77,7 @@ warn "Pick the style:"
 read input_style
 
 case "$input_style" in
-  1 | 2 | 3 | 4 | 5 | d | D)
+  1 | 2 | 3 | 4 | 5 | 6 | d | D)
     echo
     echo "1. Webpage"
     echo "2. Homework"
@@ -88,30 +89,33 @@ case "$input_style" in
     read input_headers
 
     if [[ "$input_style" == 1 ]]; then
-      style="$SOURCE_ROOT/essay.css"
+      style="$SOURCE_ROOT/noto-sans.css"
+    elif [[ "$input_style" == 2 ]]; then
+      style="$SOURCE_ROOT/noto-serif.css"
+    elif [[ "$input_style" == 3 ]]; then
+      style="$SOURCE_ROOT/microsoft-word.css"
       margin_top="1in"
       margin_bottom="1in"
       margin_right="1in"
       margin_left="1in"
-    elif [[ "$input_style" == 2 ]]; then
-      style="$SOURCE_ROOT/business.css"
-      margin_top="1.32in"
-      margin_right="0.7in"
-      margin_left="0.7in"
-    elif [[ "$input_style" == 3 ]]; then
-      style="$SOURCE_ROOT/adobe_acrobat.css"
     elif [[ "$input_style" == 4 ]]; then
-      style="$SOURCE_ROOT/microsoft_word.css"
+      style="$SOURCE_ROOT/apple-pages.css"
       margin_top="1in"
       margin_bottom="1in"
       margin_right="1in"
       margin_left="1in"
     elif [[ "$input_style" == 5 ]]; then
-      style="$SOURCE_ROOT/apple_pages.css"
+      style="$SOURCE_ROOT/essay.css"
       margin_top="1in"
       margin_bottom="1in"
       margin_right="1in"
       margin_left="1in"
+    elif [[ "$input_style" == 6 ]]; then
+      style="$SOURCE_ROOT/business.css"
+      margin_top="1.32in"
+      margin_bottom="1in"
+      margin_right="0.7in"
+      margin_left="0.7in"
     fi
 
     case "$input_headers" in
@@ -135,24 +139,24 @@ case "$input_style" in
         read TITLE
         patch "$style" "$margin_top" "$margin_bottom" "$margin_right" "$margin_left" "<div style='font-size: 9px; margin-left: 1cm;'> <span>$SUBJECT</span> </div> <div style='margin-left: auto; margin-right: 1cm;'> <img src='\$IMAGE_BASE64'> </div>" "<div style='font-size: 9px; margin-left: 1cm;'> <span>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> / <span class='totalPages'></span> </div>"
         ;;
-      e | E) patch "$style" "$margin_top" "$margin_bottom" "$margin_right" "$margin_left" "$HEADERS_EMPTY" "$HEADERS_EMPTY" ;;
       d | D) patch "$style" "$margin_top" "$margin_bottom" "$margin_right" "$margin_left";;
+      e | E) patch "$style" "$margin_top" "$margin_bottom" "$margin_right" "$margin_left" "$HEADERS_EMPTY" "$HEADERS_EMPTY" ;;
       *) die "Unable to recognize input." ;;
     esac
     ;;
-  6)
+  7)
     echo
     warn "Enter title:"
     read TITLE
     patch "$SOURCE_ROOT/apa-style.css" "1in" "1in" "1in" "1in" "<div style='font-size: 9px; margin-left: 1cm;'> <span style='text-transform: uppercase;'>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> </div>" "$HEADERS_EMPTY"
     ;;
-  7)
+  8)
     echo
     warn "Enter last name:"
     read LAST_NAME
-    patch "$SOURCE_ROOT/mla-style.css" "1in" "1in" "1in" "1in" "<div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span>$LAST_NAME</span><span class='pageNumber'></span> </div>" "$HEADERS_EMPTY"
+    patch "$SOURCE_ROOT/mla-style.css" "1in" "1in" "1in" "1in" "<div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span>$LAST_NAME</span> <span class='pageNumber'></span> </div>" "$HEADERS_EMPTY"
     ;;
-  c | C)
+  r | R)
     jq "del(.\"markdown-pdf\")" "$SETTINGS_JSON" | sponge "$SETTINGS_JSON";;
   q | Q) ;;
   *) die "Unable to recognize input." ;;

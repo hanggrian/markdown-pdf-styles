@@ -5,15 +5,16 @@
 Stylesheets for [VSCode Markdown PDF](https://github.com/yzane/vscode-markdown-pdf/).
 
 - Styles
+  - Google fonts: [Noto Sans](#noto-sans), [Noto Serif](#noto-sans)
+  - Application default: [*Microsoft Word*](#microsoft-word), [*Apple Pages*](#apple-pages)
   - Colorful: [Essay](#essay), [Business](#business)
-  - Application default: [*Adobe Acrobat*](#adobe-acrobat), [*Microsoft Word*](#microsoft-word),
-    [*Apple Pages*](#apple-pages)
   - Academic paper: [APA Style](#apa-style), [MLA Style](#mla-style)
 - Headers & Footers: [Webpage](#webpage), [Homework](#homework)
 
 ## Usage
 
-Download the repository source code as ZIP and extract. To use the style, modify VSCode user `settings.json` according to the style below.
+Download the repository source code as ZIP and extract. To use the style, modify
+VSCode user `settings.json` according to the style below.
 
 There is also `install.sh` that modifies VSCode user settings based on user
 input.
@@ -22,44 +23,24 @@ input.
 
 ## Styles
 
-### Essay
+### Noto Sans
 
-![Essay style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_essay.png)
+![Sans style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_sans.png)
 
-Inspired by an official style in *Apple Pages* with the same name.
+`Noto Sans` is an official Google fonts.
 
 ```json
-"markdown-pdf.styles": [".../markdown-pdf-styles/essay.css"],
-"markdown-pdf.margin.top": "1in",
-"markdown-pdf.margin.bottom": "1in",
-"markdown-pdf.margin.right": "1in",
-"markdown-pdf.margin.left": "1in"
+"markdown-pdf.styles": [".../markdown-pdf-styles/noto-sans.css"]
 ```
 
-### Business
+### Noto Serif
 
-![Business style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_business.png)
+![Serif style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_serif.png)
 
-Inspired by an official style in *Microsoft Word* with the same name.
-
-```json
-"markdown-pdf.styles": [".../markdown-pdf-styles/business.css"],
-"markdown-pdf.margin.top": "1.32in",
-"markdown-pdf.margin.bottom": "1in",
-"markdown-pdf.margin.right": "0.7in",
-"markdown-pdf.margin.left": "0.7in"
-```
-
-### *Adobe Acrobat*
-
-![Acrobat style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_acrobat.png)
-
-Acrobat uses proprietary `Minion Pro` font, resulting in newspaper-like looks.
+`Noto Serif` is an official Google fonts.
 
 ```json
-"markdown-pdf.styles": [
-  ".../markdown-pdf-styles/adobe-acrobat.css"
-]
+"markdown-pdf.styles": [".../markdown-pdf-styles/noto-serif.css"]
 ```
 
 ### *Microsoft Word*
@@ -88,6 +69,34 @@ iWork uses wide `Helvetica` font and ridiculously large headlines.
 "markdown-pdf.margin.bottom": "1in",
 "markdown-pdf.margin.right": "1in",
 "markdown-pdf.margin.left": "1in"
+```
+
+### Essay
+
+![Essay style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_essay.png)
+
+Inspired by an official style in *Apple Pages* with the same name.
+
+```json
+"markdown-pdf.styles": [".../markdown-pdf-styles/essay.css"],
+"markdown-pdf.margin.top": "1in",
+"markdown-pdf.margin.bottom": "1in",
+"markdown-pdf.margin.right": "1in",
+"markdown-pdf.margin.left": "1in"
+```
+
+### Business
+
+![Business style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_business.png)
+
+Inspired by an official style in *Microsoft Word* with the same name.
+
+```json
+"markdown-pdf.styles": [".../markdown-pdf-styles/business.css"],
+"markdown-pdf.margin.top": "1.32in",
+"markdown-pdf.margin.bottom": "1in",
+"markdown-pdf.margin.right": "0.7in",
+"markdown-pdf.margin.left": "0.7in"
 ```
 
 ### [APA Style](https://apastyle.apa.org/style-grammar-guidelines/paper-format/)
@@ -122,7 +131,7 @@ APA is an academic paper format with serif font.
 "markdown-pdf.margin.bottom": "1in",
 "markdown-pdf.margin.right": "1in",
 "markdown-pdf.margin.left": "1in",
-"markdown-pdf.headerTemplate": "<div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span>$LAST_NAME</span><span class='pageNumber'></span> </div>",
+"markdown-pdf.headerTemplate": "<div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span>$LAST_NAME</span> <span class='pageNumber'></span> </div>",
 "markdown-pdf.footerTemplate": "<div> </div>"
 ```
 
