@@ -1,18 +1,15 @@
-@import 'styles/fix-sup.css';
+@import 'styles/article.css';
 @import 'styles/no-margin.css';
 
-* {
+body {
+  font-family: 'Times New Roman', serif;
+  font-weight: normal;
+  font-size: 12pt;
   line-height: 2.0;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Times New Roman', serif;
   font-weight: bold;
-  font-size: 12pt;
-}
-
-body {
-  font-family: 'Times New Roman', serif;
-  font-weight: normal;
   font-size: 12pt;
 }

@@ -1,0 +1,22 @@
+/*
+Common styling for most writing documents:
+- Paragraph are indented and aligned.
+- Superscript and subscript won't affect line height.
+*/
+
+p {
+  text-align: justify;
+  text-indent: 0.5in;
+}
+
+sup {
+  vertical-align: top;
+  position: relative;
+  top: -0.5em;
+}
+
+sub {
+  vertical-align: bottom;
+  position: relative;
+  top: 0.5em;
+}

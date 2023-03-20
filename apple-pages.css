@@ -1,7 +1,11 @@
 @import 'styles/no-margin.css';
 @import url('https://fonts.cdnfonts.com/css/helvetica-neue-9');
 
-* {
+body {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: normal;
+  font-size: 11pt;
+  color: #000;
   line-height: 1.0;
 }
 
@@ -45,11 +49,4 @@ h6 {
   font-weight: bold;
   font-size: 16pt;
   color: #f50c20;
-}
-
-body {
-  font-family: 'Helvetica', sans-serif;
-  font-weight: normal;
-  font-size: 11pt;
-  color: #000;
 }

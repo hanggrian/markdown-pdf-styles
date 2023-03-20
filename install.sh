@@ -19,16 +19,22 @@ if [[ ! -f "$SETTINGS_JSON" ]]; then die "No VSCode settings found."; fi
 warn() { echo "$YELLOW$*$END"; } >&2
 die() { echo; echo "$RED$*$END"; echo; exit 1; } >&2
 
-write() {
+remove_setting() {
+  echo "${RED}remove $1$END"
+  jq "del(.$1)" "$SETTINGS_JSON" | sponge "$SETTINGS_JSON"
+}
+set_setting() {
+  echo "${GREEN}set $1 = $2$END"
+  jq ".$1 = $2" "$SETTINGS_JSON" | sponge "$SETTINGS_JSON"
+}
+
+overwrite() {
   local key="$1"
   local value="$2"
-
-  if [[ "$value" = "\"\"" ]]; then
-    echo "${RED}remove $key$END"
-    jq "del(.\"markdown-pdf\".$key)" "$SETTINGS_JSON" | sponge "$SETTINGS_JSON"
+  if [[ "$value" = "\"\"" ]] || [[ "$value" = "[\"\"]" ]]; then
+    remove_setting "\"markdown-pdf\".$key"
   else
-    echo "${GREEN}set $key = $value$END"
-    jq ".\"markdown-pdf\".$key = $value" "$SETTINGS_JSON" | sponge "$SETTINGS_JSON"
+    set_setting "\"markdown-pdf\".$key" "$value"
   fi
 }
 
@@ -42,18 +48,19 @@ patch() {
   local footer="$7"
 
   echo
-  write "\"styles\"" "[\"$style\"]"
+  overwrite "\"styles\"" "[\"$style\"]"
 
-  write "\"margin\".\"top\"" "\"$margin_top\""
-  write "\"margin\".\"bottom\"" "\"$margin_bottom\""
-  write "\"margin\".\"right\"" "\"$margin_right\""
-  write "\"margin\".\"left\"" "\"$margin_left\""
-  if [[ "$margin_top" = "\"\"" ]] && [[ "$margin_bottom" = "\"\"" ]] && [[ "$margin_right" = "\"\"" ]] && [[ "$margin_left" = "\"\"" ]]; then
-    jq "del(.\"markdown-pdf\".\"margin\")" "$SETTINGS_JSON" | sponge "$SETTINGS_JSON"
+  if [[ "$margin_top" = "" ]] && [[ "$margin_bottom" = "" ]] && [[ "$margin_right" = "" ]] && [[ "$margin_left" = "" ]]; then
+    remove_setting "\"markdown-pdf\".\"margin\""
+  else
+    overwrite "\"margin\".\"top\"" "\"$margin_top\""
+    overwrite "\"margin\".\"bottom\"" "\"$margin_bottom\""
+    overwrite "\"margin\".\"right\"" "\"$margin_right\""
+    overwrite "\"margin\".\"left\"" "\"$margin_left\""
   fi
 
-  write "\"headerTemplate\"" "\"$header\""
-  write "\"footerTemplate\"" "\"$footer\""
+  overwrite "\"headerTemplate\"" "\"$header\""
+  overwrite "\"footerTemplate\"" "\"$footer\""
 }
 
 echo
@@ -157,7 +164,9 @@ case "$input_style" in
     patch "$SOURCE_ROOT/mla-style.css" "1in" "1in" "1in" "1in" "<div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span>$LAST_NAME</span> <span class='pageNumber'></span> </div>" "$HEADERS_EMPTY"
     ;;
   r | R)
-    jq "del(.\"markdown-pdf\")" "$SETTINGS_JSON" | sponge "$SETTINGS_JSON";;
+    echo
+    remove_setting "\"markdown-pdf\""
+    ;;
   q | Q) ;;
   *) die "Unable to recognize input." ;;
 esac

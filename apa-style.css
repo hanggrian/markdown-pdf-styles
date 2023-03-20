@@ -1,8 +1,11 @@
-@import 'styles/fix-sup.css';
+@import 'styles/article.css';
 @import 'styles/no-margin.css';
 @import url('https://fonts.googleapis.com/css?family=Calibri:400,700,400italic,700italic');
 
-* {
+body {
+  font-family: Calibri, sans-serif;
+  font-weight: normal;
+  font-size: 11pt;
   line-height: 2.0;
 }
 
@@ -10,12 +13,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Calibri, sans-serif;
   font-weight: bold;
   font-size: 12pt;
-}
-
-body {
-  font-family: Calibri, sans-serif;
-  font-weight: normal;
-  font-size: 11pt;
 }
 
 code {

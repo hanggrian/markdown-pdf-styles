@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Noto Serif', serif;
-  font-weight: bold;
-}
-
 body {
   font-family: 'Noto Serif', serif;
   font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif', serif;
+  font-weight: bold;
 }
 
 code {

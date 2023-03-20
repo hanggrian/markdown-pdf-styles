@@ -1,6 +1,14 @@
 @import 'styles/no-margin.css';
 @import url('https://fonts.cdnfonts.com/css/georgia-2');
 
+body {
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-size: 12pt;
+  color: #747474;
+  line-height: 1.5;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: georgia, serif;
   color: #0068b9;
@@ -37,12 +45,4 @@ h5 {
 h6 {
   font-weight: bold;
   font-size: 12pt;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  font-weight: normal;
-  font-size: 12pt;
-  color: #747474;
-  line-height: 1.5;
 }

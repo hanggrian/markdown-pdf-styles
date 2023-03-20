@@ -27,7 +27,7 @@ input.
 
 ![Sans style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_sans.png)
 
-`Noto Sans` is an official Google fonts.
+`Noto Sans` is an official Google font.
 
 ```json
 "markdown-pdf.styles": [".../markdown-pdf-styles/noto-sans.css"]
@@ -37,7 +37,7 @@ input.
 
 ![Serif style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_serif.png)
 
-`Noto Serif` is an official Google fonts.
+`Noto Serif` is an official Google font.
 
 ```json
 "markdown-pdf.styles": [".../markdown-pdf-styles/noto-serif.css"]
