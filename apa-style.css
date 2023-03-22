@@ -1,8 +1,9 @@
 @import 'styles/article.css';
-@import 'styles/no-margin.css';
 @import url('https://fonts.googleapis.com/css?family=Calibri:400,700,400italic,700italic');
 
 body {
+  padding: 0; /* use custom margin */
+
   font-family: Calibri, sans-serif;
   font-weight: normal;
   font-size: 11pt;

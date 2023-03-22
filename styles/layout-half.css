@@ -1,0 +1,5 @@
+/* Layout-only stylesheet with 2 side-by-side panes. */
+
+body {
+  column-count: 2;
+}

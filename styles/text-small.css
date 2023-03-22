@@ -1,0 +1,21 @@
+/* Text-only stylesheet with small font sizes. */
+
+body {
+  font-size: 10px; /* -4px from 14px */
+  line-height: 10px; /* -8px from 22px */
+}
+
+code {
+  font-size: 10px; /* -4px from 14px */
+  line-height: 11px; /* -8px from 19px */
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 8px; /* -8px from 16px */
+}
+
+pre:not(.hljs) {
+	padding: 15px; /* -8px from 23px */
+	line-height: 11px; /* -8px from 19px */
+}

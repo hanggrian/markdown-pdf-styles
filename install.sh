@@ -27,18 +27,25 @@ set_setting() {
   echo "${GREEN}set $1 = $2$END"
   jq ".$1 = $2" "$SETTINGS_JSON" | sponge "$SETTINGS_JSON"
 }
-
-overwrite() {
+append_setting() {
+  echo "${GREEN}append $1 = $2$END"
+  jq ".$1 += [\"$2\"]" "$SETTINGS_JSON" | sponge "$SETTINGS_JSON"
+}
+overwrite_setting() {
   local key="$1"
   local value="$2"
-  if [[ "$value" = "\"\"" ]] || [[ "$value" = "[\"\"]" ]]; then
+  if [[ "$value" = "\"\"" ]]; then
     remove_setting "\"markdown-pdf\".$key"
   else
     set_setting "\"markdown-pdf\".$key" "$value"
   fi
 }
 
-patch() {
+append_style() {
+  echo
+  append_setting "\"markdown-pdf\".\"styles\"" "$1";
+}
+setall_styles() {
   local style="$1"
   local margin_top="$2"
   local margin_bottom="$3"
@@ -48,130 +55,139 @@ patch() {
   local footer="$7"
 
   echo
-  overwrite "\"styles\"" "[\"$style\"]"
-
+  if [[ "$style" != "" ]]; then
+    overwrite_setting "\"styles\"" "[\"$style\"]"
+  fi
   if [[ "$margin_top" = "" ]] && [[ "$margin_bottom" = "" ]] && [[ "$margin_right" = "" ]] && [[ "$margin_left" = "" ]]; then
     remove_setting "\"markdown-pdf\".\"margin\""
   else
-    overwrite "\"margin\".\"top\"" "\"$margin_top\""
-    overwrite "\"margin\".\"bottom\"" "\"$margin_bottom\""
-    overwrite "\"margin\".\"right\"" "\"$margin_right\""
-    overwrite "\"margin\".\"left\"" "\"$margin_left\""
+    overwrite_setting "\"margin\".\"top\"" "\"$margin_top\""
+    overwrite_setting "\"margin\".\"bottom\"" "\"$margin_bottom\""
+    overwrite_setting "\"margin\".\"right\"" "\"$margin_right\""
+    overwrite_setting "\"margin\".\"left\"" "\"$margin_left\""
   fi
-
-  overwrite "\"headerTemplate\"" "\"$header\""
-  overwrite "\"footerTemplate\"" "\"$footer\""
+  overwrite_setting "\"headerTemplate\"" "\"$header\""
+  overwrite_setting "\"footerTemplate\"" "\"$footer\""
 }
 
 echo
 echo "$BOLD${UNDERLINE}Markdown PDF Styles$END"
 echo
-echo "1. Google - Noto Sans"
-echo "2. Google - Noto Serif"
-echo "3. Application - Microsoft Word"
-echo "4. Application - Apple Pages"
-echo "5. Colorful - Essay"
-echo "6. Colorful - Business"
-echo "7. Academic - APA Style"
-echo "8. Academic - MLA Style"
+echo "1. Single styles"
+echo "2. Build styles"
+echo "3. Headers & footers"
 echo
-echo "D. Default"
 echo "R. Reset"
-echo
 echo "Q. Quit"
 echo
-warn "Pick the style:"
-read input_style
+warn "Choose:"
+read input
 
-case "$input_style" in
-  1 | 2 | 3 | 4 | 5 | 6 | d | D)
-    echo
-    echo "1. Webpage"
-    echo "2. Homework"
-    echo
-    echo "D. Default"
-    echo "E. Empty"
-    echo
-    warn "Pick the header & footer:"
-    read input_headers
+if [[ "$input" = 1 ]]; then
+  echo
+  echo "${BOLD}Single styles$END"
+  echo
+  echo "1. Application - Microsoft Word"
+  echo "2. Application - Apple Pages"
+  echo "3. Colorful - Essay"
+  echo "4. Colorful - Business"
+  echo "5. Academic - APA Style"
+  echo "6. Academic - MLA Style"
+  echo
+  warn "Pick the style:"
+  read input_style
 
-    if [[ "$input_style" == 1 ]]; then
-      style="$SOURCE_ROOT/noto-sans.css"
-    elif [[ "$input_style" == 2 ]]; then
-      style="$SOURCE_ROOT/noto-serif.css"
-    elif [[ "$input_style" == 3 ]]; then
-      style="$SOURCE_ROOT/microsoft-word.css"
-      margin_top="1in"
-      margin_bottom="1in"
-      margin_right="1in"
-      margin_left="1in"
-    elif [[ "$input_style" == 4 ]]; then
-      style="$SOURCE_ROOT/apple-pages.css"
-      margin_top="1in"
-      margin_bottom="1in"
-      margin_right="1in"
-      margin_left="1in"
-    elif [[ "$input_style" == 5 ]]; then
-      style="$SOURCE_ROOT/essay.css"
-      margin_top="1in"
-      margin_bottom="1in"
-      margin_right="1in"
-      margin_left="1in"
-    elif [[ "$input_style" == 6 ]]; then
-      style="$SOURCE_ROOT/business.css"
-      margin_top="1.32in"
-      margin_bottom="1in"
-      margin_right="0.7in"
-      margin_left="0.7in"
-    fi
+  case "$input_style" in
+    1) setall_styles "$SOURCE_ROOT/microsoft-word.css" "1in" "1in" "1in" "1in" "" "" ;;
+    2) setall_styles "$SOURCE_ROOT/apple-pages.css" "1in" "1in" "1in" "1in" "" "" ;;
+    3) setall_styles "$SOURCE_ROOT/essay.css" "1in" "1in" "1in" "1in" "" "" ;;
+    4) setall_styles "$SOURCE_ROOT/business.css" "1.32in" "1in" "0.7in" "0.7in" "" "" ;;
+    5)
+      echo
+      warn "Enter title:"
+      read TITLE
+      setall_styles "$SOURCE_ROOT/apa-style.css" "1in" "1in" "1in" "1in" "<div style='font-size: 9px; margin-left: 1cm;'> <span style='text-transform: uppercase;'>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> </div>" "$HEADERS_EMPTY"
+      ;;
+    6)
+      echo
+      warn "Enter last name:"
+      read LAST_NAME
+      setall_styles "$SOURCE_ROOT/mla-style.css" "1in" "1in" "1in" "1in" "<div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span>$LAST_NAME</span> <span class='pageNumber'></span> </div>" "$HEADERS_EMPTY"
+      ;;
+    *) die "Unable to recognize input." ;;
+  esac
+elif [[ "$input" = 2 ]]; then
+  echo
+  echo "${BOLD}Build styles$END"
+  echo
+  echo "1. Font - Sans"
+  echo "2. Font - Serif"
+  echo "3. Text - Normal"
+  echo "4. Text - Small"
+  echo "5. Layout - Half"
+  echo "6. Layout - One-third"
+  echo "7. Layout - Quarter"
+  echo
+  warn "Pick the styles:"
+  read input_styles
 
-    case "$input_headers" in
-      1)
-        echo
-        warn "Enter url:"
-        read URL
-        echo
-        warn "Enter title:"
-        read TITLE
-        patch "$style" "$margin_top" "$margin_bottom" "$margin_right" "$margin_left" "<div style='font-size: 9px; margin-left: 1cm; margin-right: 1cm;'> <span>$URL</span> </div>" "<div style='font-size: 9px; margin-left: 1cm;'> <span>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> / <span class='totalPages'></span> </div>"
-        ;;
-      2)
-        echo
-        warn "Enter subject:"
-        read SUBJECT
-        echo
-        warn "\$IMAGE_BASE64 need to be set manually later."
-        echo
-        warn "Enter title:"
-        read TITLE
-        patch "$style" "$margin_top" "$margin_bottom" "$margin_right" "$margin_left" "<div style='font-size: 9px; margin-left: 1cm;'> <span>$SUBJECT</span> </div> <div style='margin-left: auto; margin-right: 1cm;'> <img src='\$IMAGE_BASE64'> </div>" "<div style='font-size: 9px; margin-left: 1cm;'> <span>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> / <span class='totalPages'></span> </div>"
-        ;;
-      d | D) patch "$style" "$margin_top" "$margin_bottom" "$margin_right" "$margin_left";;
-      e | E) patch "$style" "$margin_top" "$margin_bottom" "$margin_right" "$margin_left" "$HEADERS_EMPTY" "$HEADERS_EMPTY" ;;
-      *) die "Unable to recognize input." ;;
-    esac
-    ;;
-  7)
-    echo
-    warn "Enter title:"
-    read TITLE
-    patch "$SOURCE_ROOT/apa-style.css" "1in" "1in" "1in" "1in" "<div style='font-size: 9px; margin-left: 1cm;'> <span style='text-transform: uppercase;'>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> </div>" "$HEADERS_EMPTY"
-    ;;
-  8)
-    echo
-    warn "Enter last name:"
-    read LAST_NAME
-    patch "$SOURCE_ROOT/mla-style.css" "1in" "1in" "1in" "1in" "<div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span>$LAST_NAME</span> <span class='pageNumber'></span> </div>" "$HEADERS_EMPTY"
-    ;;
-  r | R)
-    echo
-    remove_setting "\"markdown-pdf\""
-    ;;
-  q | Q) ;;
-  *) die "Unable to recognize input." ;;
-esac
+  case "$input_styles" in
+    1) append_style "$SOURCE_ROOT/styles/font-sans.css" ;;
+    2) append_style "$SOURCE_ROOT/styles/font-serif.css" ;;
+    3) append_style "$SOURCE_ROOT/styles/text-normal.css" ;;
+    4) append_style "$SOURCE_ROOT/styles/text-small.css" ;;
+    5) append_style "$SOURCE_ROOT/styles/layout-half.css" ;;
+    6) append_style "$SOURCE_ROOT/styles/layout-onethird.css" ;;
+    7) append_style "$SOURCE_ROOT/styles/layout-quarter.css" ;;
+    *) die "Unable to recognize input." ;;
+  esac
+elif [[ "$input" = 3 ]]; then
+  echo
+  echo "${BOLD}Headers & footers$END"
+  echo
+  echo "1. Webpage"
+  echo "2. Homework"
+  echo "D. Default"
+  echo "E. Empty"
+  echo
+  warn "Pick the headers:"
+  read input_headers
+
+  case "$input_headers" in
+    1)
+      echo
+      warn "Enter url:"
+      read URL
+      echo
+      warn "Enter title:"
+      read TITLE
+      setall_styles "" "" "" "" "" "<div style='font-size: 9px; margin-left: 1cm; margin-right: 1cm;'> <span>$URL</span> </div>" "<div style='font-size: 9px; margin-left: 1cm;'> <span>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> / <span class='totalPages'></span> </div>"
+      ;;
+    2)
+      echo
+      warn "Enter subject:"
+      read SUBJECT
+      echo
+      warn "\$IMAGE_BASE64 need to be set manually later."
+      echo
+      warn "Enter title:"
+      read TITLE
+      setall_styles "" "" "" "" "" "<div style='font-size: 9px; margin-left: 1cm;'> <span>$SUBJECT</span> </div> <div style='margin-left: auto; margin-right: 1cm;'> <img src='\$IMAGE_BASE64'> </div>" "<div style='font-size: 9px; margin-left: 1cm;'> <span>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> / <span class='totalPages'></span> </div>"
+      ;;
+    *) die "Unable to recognize input." ;;
+  esac
+elif [[ "$input" = "r" ]] || [[ "$input" = "R" ]]; then
+  echo
+  remove_setting "\"markdown-pdf\""
+elif [[ "$input" = "q" ]] || [[ "$input" = "Q" ]]; then
+  echo
+  echo "Goodbye!"
+  echo
+  exit 0
+else
+  die "Unable to recognize input."
+fi
 
 echo
-echo "Goodbye!"
-echo
-exit 0
+echo "Done, restarting..."
+exec bash "$0" "$@"

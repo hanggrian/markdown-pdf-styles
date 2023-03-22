@@ -1,0 +1,21 @@
+/* Text-only stylesheet with normal font sizes. */
+
+body {
+  font-size: 12px; /* -2px from 14px */
+  line-height: 18px; /* -4px from 22px */
+}
+
+code {
+  font-size: 12px; /* -2px from 14px */
+  line-height: 15px; /* -4px from 19px */
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 12px; /* -4px from 16px */
+}
+
+pre:not(.hljs) {
+	padding: 19px; /* -4px from 23px */
+	line-height: 15px; /* -4px from 19px */
+}

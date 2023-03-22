@@ -1,7 +1,8 @@
 @import 'styles/article.css';
-@import 'styles/no-margin.css';
 
 body {
+  padding: 0; /* use custom margin */
+
   font-family: 'Times New Roman', serif;
   font-weight: normal;
   font-size: 12pt;

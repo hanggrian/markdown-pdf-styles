@@ -1,7 +1,8 @@
-@import 'styles/no-margin.css';
 @import url('https://fonts.cdnfonts.com/css/helvetica-neue-9');
 
 body {
+  padding: 0; /* use custom margin */
+
   font-family: 'Helvetica', sans-serif;
   font-weight: normal;
   font-size: 11pt;

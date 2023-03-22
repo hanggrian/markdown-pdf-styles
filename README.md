@@ -4,12 +4,17 @@
 
 Stylesheets for [VSCode Markdown PDF](https://github.com/yzane/vscode-markdown-pdf/).
 
-- Styles
-  - Google fonts: [Noto Sans](#noto-sans), [Noto Serif](#noto-sans)
+- Pick single style:
   - Application default: [*Microsoft Word*](#microsoft-word), [*Apple Pages*](#apple-pages)
   - Colorful: [Essay](#essay), [Business](#business)
   - Academic paper: [APA Style](#apa-style), [MLA Style](#mla-style)
-- Headers & Footers: [Webpage](#webpage), [Homework](#homework)
+- Or build your own:
+  - Fonts: [Noto Sans](#noto-sans), [Noto Serif](#noto-sans)
+  - Text sizes: [Normal Size](#normal-size), [Small Size](#small-size)
+  - Layouts: [Half Columns](#half-columns), [One-third Columns](#one-third-columns),
+    [Quarter Columns](#quarter-columns)
+  - Others: [Article](#article)
+- Headers & footers: [Webpage](#webpage), [Homework](#homework)
 
 ## Usage
 
@@ -21,31 +26,11 @@ input.
 
 ![macOS installation.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/install.png)
 
-## Styles
-
-### Noto Sans
-
-![Sans style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_sans.png)
-
-`Noto Sans` is an official Google font.
-
-```json
-"markdown-pdf.styles": [".../markdown-pdf-styles/noto-sans.css"]
-```
-
-### Noto Serif
-
-![Serif style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_serif.png)
-
-`Noto Serif` is an official Google font.
-
-```json
-"markdown-pdf.styles": [".../markdown-pdf-styles/noto-serif.css"]
-```
+## Single styles
 
 ### *Microsoft Word*
 
-![Word style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_word.png)
+![Microsoft Word style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_word.png)
 
 Office uses clean `Calibri` font and lighter font for headlines.
 
@@ -59,7 +44,7 @@ Office uses clean `Calibri` font and lighter font for headlines.
 
 ### *Apple Pages*
 
-![Pages style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_pages.png)
+![Apple Pages style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_pages.png)
 
 iWork uses wide `Helvetica` font and ridiculously large headlines.
 
@@ -135,16 +120,72 @@ APA is an academic paper format with serif font.
 "markdown-pdf.footerTemplate": "<div> </div>"
 ```
 
-## Headers & Footers
+## Build styles
+
+### Noto Sans
+
+![Noto Sans style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_sans.png)
+
+```json
+"markdown-pdf.styles": [".../markdown-pdf-styles/styles/font-sans.css"],
+```
+
+### Noto Serif
+
+![Noto Serif style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_serif.png)
+
+```json
+"markdown-pdf.styles": [".../markdown-pdf-styles/styles/font-serif.css"],
+```
+
+### Normal Size
+
+![Normal size style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_normal.png)
+
+```json
+"markdown-pdf.styles": [".../markdown-pdf-styles/styles/text-normal.css"],
+```
+
+### Small Size
+
+![Small size style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_small.png)
+
+```json
+"markdown-pdf.styles": [".../markdown-pdf-styles/styles/text-small.css"],
+```
+
+### Half Columns
+
+![Half columns style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_half.png)
+
+```json
+"markdown-pdf.styles": [".../markdown-pdf-styles/styles/layout-half.css"],
+```
+
+### One-third Columns
+
+![One-third columns style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_onethird.png)
+
+```json
+"markdown-pdf.styles": [".../markdown-pdf-styles/styles/layout-onethird.css"],
+```
+
+### Quarter Columns
+
+![Quarter columns style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_quarter.png)
+
+```json
+"markdown-pdf.styles": [".../markdown-pdf-styles/styles/layout-quarter.css"],
+```
+
+## Headers & footers
 
 ### Webpage
 
 ![Webpage header preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/header_webpage.png)
 ![Webpage footer preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/footer_webpage.png)
 
-A clean header and footer consisting only URL, title and page number.
-
-> Replace variable `$URL` to webpage link, `$TITLE` with document title.
+Replace variable `$URL` to webpage link, `$TITLE` with document title.
 
 ```json
 "markdown-pdf.headerTemplate": "<div style='font-size: 9px; margin-left: 1cm; margin-right: 1cm;'> <span>$URL</span> </div>",
@@ -156,11 +197,8 @@ A clean header and footer consisting only URL, title and page number.
 ![Homework header preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/header_homework.png)
 ![Homework footer preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/footer_homework.png)
 
-Packed header & footer detailing student credential, class subject, school logo
-and page number.
-
-> Replace variable `$SUBJECT` to student credential, `$IMAGE_BASE64` to school
-  logo (10px height), `$TITLE` to document title.
+Replace variable `$SUBJECT` to student credential, `$IMAGE_BASE64` to school
+logo (10px height), `$TITLE` to document title.
 
 ```json
 "markdown-pdf.headerTemplate": "<div style='font-size: 9px; margin-left: 1cm;'> <span>$SUBJECT</span> </div> <div style='margin-left: auto; margin-right: 1cm;'> <img src='$IMAGE_BASE64'> </div>",
