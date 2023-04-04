@@ -13,7 +13,7 @@ Stylesheets for [VSCode Markdown PDF](https://github.com/yzane/vscode-markdown-p
   - Text sizes: [Normal Size](#normal-size), [Small Size](#small-size)
   - Layouts: [Half Columns](#half-columns), [One-third Columns](#one-third-columns),
     [Quarter Columns](#quarter-columns)
-  - Others: [Article](#article)
+  - Others: [Citation](#citation), [Paragraph](#paragraph)
 - Headers & footers: [Webpage](#webpage), [Homework](#homework)
 
 ## Usage
@@ -21,10 +21,8 @@ Stylesheets for [VSCode Markdown PDF](https://github.com/yzane/vscode-markdown-p
 Download the repository source code as ZIP and extract. To use the style, modify
 VSCode user `settings.json` according to the style below.
 
-There is also `install.sh` that modifies VSCode user settings based on user
-input.
-
-![macOS installation.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/install.png)
+A root project directory may also have `.vscode/settings.json` for
+project-specific preferences, which will override global settings.
 
 ## Single styles
 
@@ -39,7 +37,7 @@ Office uses clean `Calibri` font and lighter font for headlines.
 "markdown-pdf.margin.top": "1in",
 "markdown-pdf.margin.bottom": "1in",
 "markdown-pdf.margin.right": "1in",
-"markdown-pdf.margin.left": "1in"
+"markdown-pdf.margin.left": "1in",
 ```
 
 ### *Apple Pages*
@@ -53,7 +51,7 @@ iWork uses wide `Helvetica` font and ridiculously large headlines.
 "markdown-pdf.margin.top": "1in",
 "markdown-pdf.margin.bottom": "1in",
 "markdown-pdf.margin.right": "1in",
-"markdown-pdf.margin.left": "1in"
+"markdown-pdf.margin.left": "1in",
 ```
 
 ### Essay
@@ -67,7 +65,7 @@ Inspired by an official style in *Apple Pages* with the same name.
 "markdown-pdf.margin.top": "1in",
 "markdown-pdf.margin.bottom": "1in",
 "markdown-pdf.margin.right": "1in",
-"markdown-pdf.margin.left": "1in"
+"markdown-pdf.margin.left": "1in",
 ```
 
 ### Business
@@ -81,7 +79,7 @@ Inspired by an official style in *Microsoft Word* with the same name.
 "markdown-pdf.margin.top": "1.32in",
 "markdown-pdf.margin.bottom": "1in",
 "markdown-pdf.margin.right": "0.7in",
-"markdown-pdf.margin.left": "0.7in"
+"markdown-pdf.margin.left": "0.7in",
 ```
 
 ### [APA Style](https://apastyle.apa.org/style-grammar-guidelines/paper-format/)
@@ -90,7 +88,7 @@ Inspired by an official style in *Microsoft Word* with the same name.
 
 APA is an academic paper format with sans serif font.
 
-> Replace variable `$TITLE` to article's title.
+Replace variable `$TITLE` to article's title.
 
 ```json
 "markdown-pdf.styles": [".../markdown-pdf-styles/apa-style.css"],
@@ -99,7 +97,7 @@ APA is an academic paper format with sans serif font.
 "markdown-pdf.margin.right": "1in",
 "markdown-pdf.margin.left": "1in",
 "markdown-pdf.headerTemplate": "<div style='font-size: 9px; margin-left: 1cm;'> <span style='text-transform: uppercase;'>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> </div>",
-"markdown-pdf.footerTemplate": "<div> </div>"
+"markdown-pdf.footerTemplate": "<div> </div>",
 ```
 
 ### [MLA Style](https://style.mla.org/mla-format/)
@@ -108,7 +106,7 @@ APA is an academic paper format with sans serif font.
 
 APA is an academic paper format with serif font.
 
-> Replace variable `$LAST_NAME` to author's last name.
+Replace variable `$LAST_NAME` to author's last name.
 
 ```json
 "markdown-pdf.styles": [".../markdown-pdf-styles/mla-style.css"],
@@ -117,7 +115,7 @@ APA is an academic paper format with serif font.
 "markdown-pdf.margin.right": "1in",
 "markdown-pdf.margin.left": "1in",
 "markdown-pdf.headerTemplate": "<div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span>$LAST_NAME</span> <span class='pageNumber'></span> </div>",
-"markdown-pdf.footerTemplate": "<div> </div>"
+"markdown-pdf.footerTemplate": "<div> </div>",
 ```
 
 ## Build styles
@@ -178,6 +176,22 @@ APA is an academic paper format with serif font.
 "markdown-pdf.styles": [".../markdown-pdf-styles/styles/layout-quarter.css"],
 ```
 
+### Citation
+
+Superscript and subscript won't affect line height.
+
+```json
+"markdown-pdf.styles": [".../markdown-pdf-styles/styles/citation.css"],
+```
+
+### Paragraph
+
+Paragraph are indented and justified.
+
+```json
+"markdown-pdf.styles": [".../markdown-pdf-styles/styles/paragraph.css"],
+```
+
 ## Headers & footers
 
 ### Webpage
@@ -189,7 +203,7 @@ Replace variable `$URL` to webpage link, `$TITLE` with document title.
 
 ```json
 "markdown-pdf.headerTemplate": "<div style='font-size: 9px; margin-left: 1cm; margin-right: 1cm;'> <span>$URL</span> </div>",
-"markdown-pdf.footerTemplate": "<div style='font-size: 9px; margin-left: 1cm;'> <span>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> / <span class='totalPages'></span> </div>"
+"markdown-pdf.footerTemplate": "<div style='font-size: 9px; margin-left: 1cm;'> <span>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> / <span class='totalPages'></span> </div>",
 ```
 
 ### Homework
@@ -202,5 +216,5 @@ logo (10px height), `$TITLE` to document title.
 
 ```json
 "markdown-pdf.headerTemplate": "<div style='font-size: 9px; margin-left: 1cm;'> <span>$SUBJECT</span> </div> <div style='margin-left: auto; margin-right: 1cm;'> <img src='$IMAGE_BASE64'> </div>",
-"markdown-pdf.footerTemplate": "<div style='font-size: 9px; margin-left: 1cm;'> <span>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> / <span class='totalPages'></span> </div>"
+"markdown-pdf.footerTemplate": "<div style='font-size: 9px; margin-left: 1cm;'> <span>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> / <span class='totalPages'></span> </div>",
 ```

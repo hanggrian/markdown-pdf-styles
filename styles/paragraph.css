@@ -1,0 +1,11 @@
+/* Paragraph are indented and justified. */
+
+p {
+  text-align: justify;
+  text-indent: 0.5in;
+}
+
+blockquote > p {
+  text-align: left;
+  text-indent: 0in;
+}

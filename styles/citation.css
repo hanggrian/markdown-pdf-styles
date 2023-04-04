@@ -1,0 +1,13 @@
+/* Superscript and subscript won't affect line height. */
+
+sup {
+  vertical-align: top;
+  position: relative;
+  top: -0.5em;
+}
+
+sub {
+  vertical-align: bottom;
+  position: relative;
+  top: 0.5em;
+}
