@@ -1,0 +1,10 @@
+{
+  "markdown-pdf.format": "Letter",
+  "markdown-pdf.styles": ["apa-style.css"],
+  "markdown-pdf.margin.top": "1in",
+  "markdown-pdf.margin.bottom": "1in",
+  "markdown-pdf.margin.right": "1in",
+  "markdown-pdf.margin.left": "1in",
+  "markdown-pdf.headerTemplate": "<div style='font-size: 9px; margin-left: 1cm;'> <span style='text-transform: uppercase;'>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> </div>",
+  "markdown-pdf.footerTemplate": "<div> </div>",
+}

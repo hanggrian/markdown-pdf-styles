@@ -1,5 +1,3 @@
-/* Layout-only stylesheet with 3 side-by-side panes. */
-
 body {
   column-count: 3;
 }

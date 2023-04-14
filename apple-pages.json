@@ -1,0 +1,7 @@
+{
+  "markdown-pdf.styles": ["apple-pages.css"],
+  "markdown-pdf.margin.top": "1in",
+  "markdown-pdf.margin.bottom": "1in",
+  "markdown-pdf.margin.right": "1in",
+  "markdown-pdf.margin.left": "1in",
+}

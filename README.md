@@ -18,11 +18,9 @@ Stylesheets for [VSCode Markdown PDF](https://github.com/yzane/vscode-markdown-p
 
 ## Usage
 
-Download the repository source code as ZIP and extract. To use the style, modify
-VSCode user `settings.json` according to the style below.
-
-A root project directory may also have `.vscode/settings.json` for
-project-specific preferences, which will override global settings.
+To use the style, modify VSCode user `settings.json` according to the style
+below. A root project directory may also have `.vscode/settings.json` for
+project-wide preferences, which will override global settings.
 
 ## Single styles
 
@@ -32,27 +30,11 @@ project-specific preferences, which will override global settings.
 
 Office uses clean `Calibri` font and lighter font for headlines.
 
-```json
-"markdown-pdf.styles": [".../markdown-pdf-styles/microsoft-word.css"]
-"markdown-pdf.margin.top": "1in",
-"markdown-pdf.margin.bottom": "1in",
-"markdown-pdf.margin.right": "1in",
-"markdown-pdf.margin.left": "1in",
-```
-
 ### *Apple Pages*
 
 ![Apple Pages style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_pages.png)
 
 iWork uses wide `Helvetica` font and ridiculously large headlines.
-
-```json
-"markdown-pdf.styles": [".../markdown-pdf-styles/apple-pages.css"]
-"markdown-pdf.margin.top": "1in",
-"markdown-pdf.margin.bottom": "1in",
-"markdown-pdf.margin.right": "1in",
-"markdown-pdf.margin.left": "1in",
-```
 
 ### Essay
 
@@ -60,27 +42,11 @@ iWork uses wide `Helvetica` font and ridiculously large headlines.
 
 Inspired by an official style in *Apple Pages* with the same name.
 
-```json
-"markdown-pdf.styles": [".../markdown-pdf-styles/essay.css"],
-"markdown-pdf.margin.top": "1in",
-"markdown-pdf.margin.bottom": "1in",
-"markdown-pdf.margin.right": "1in",
-"markdown-pdf.margin.left": "1in",
-```
-
 ### Business
 
 ![Business style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_business.png)
 
 Inspired by an official style in *Microsoft Word* with the same name.
-
-```json
-"markdown-pdf.styles": [".../markdown-pdf-styles/business.css"],
-"markdown-pdf.margin.top": "1.32in",
-"markdown-pdf.margin.bottom": "1in",
-"markdown-pdf.margin.right": "0.7in",
-"markdown-pdf.margin.left": "0.7in",
-```
 
 ### [APA Style](https://apastyle.apa.org/style-grammar-guidelines/paper-format/)
 
@@ -90,16 +56,6 @@ APA is an academic paper format with sans serif font.
 
 Replace variable `$TITLE` to article's title.
 
-```json
-"markdown-pdf.styles": [".../markdown-pdf-styles/apa-style.css"],
-"markdown-pdf.margin.top": "1in",
-"markdown-pdf.margin.bottom": "1in",
-"markdown-pdf.margin.right": "1in",
-"markdown-pdf.margin.left": "1in",
-"markdown-pdf.headerTemplate": "<div style='font-size: 9px; margin-left: 1cm;'> <span style='text-transform: uppercase;'>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> </div>",
-"markdown-pdf.footerTemplate": "<div> </div>",
-```
-
 ### [MLA Style](https://style.mla.org/mla-format/)
 
 ![MLA style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_mla.png)
@@ -108,72 +64,104 @@ APA is an academic paper format with serif font.
 
 Replace variable `$LAST_NAME` to author's last name.
 
-```json
-"markdown-pdf.styles": [".../markdown-pdf-styles/mla-style.css"],
-"markdown-pdf.margin.top": "1in",
-"markdown-pdf.margin.bottom": "1in",
-"markdown-pdf.margin.right": "1in",
-"markdown-pdf.margin.left": "1in",
-"markdown-pdf.headerTemplate": "<div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span>$LAST_NAME</span> <span class='pageNumber'></span> </div>",
-"markdown-pdf.footerTemplate": "<div> </div>",
-```
-
 ## Build styles
 
 ### Noto Sans
 
 ![Noto Sans style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_sans.png)
 
+Font-only stylesheet with Noto Sans and JetBrains Mono.
+
 ```json
-"markdown-pdf.styles": [".../markdown-pdf-styles/styles/font-sans.css"],
+{
+  "markdown-pdf.styles": [
+    ".../markdown-pdf-styles/styles/font-sans.css",
+  ],
+}
 ```
 
 ### Noto Serif
 
 ![Noto Serif style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_serif.png)
 
+Font-only stylesheet with Noto Sans and JetBrains Mono.
+
 ```json
-"markdown-pdf.styles": [".../markdown-pdf-styles/styles/font-serif.css"],
+{
+  "markdown-pdf.styles": [
+    ".../markdown-pdf-styles/styles/font-serif.css",
+  ],
+}
 ```
 
 ### Normal Size
 
 ![Normal size style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_normal.png)
 
+Text-only stylesheet with normal font sizes.
+
 ```json
-"markdown-pdf.styles": [".../markdown-pdf-styles/styles/text-normal.css"],
+{
+  "markdown-pdf.styles": [
+    ".../markdown-pdf-styles/styles/text-normal.css",
+  ],
+}
 ```
 
 ### Small Size
 
 ![Small size style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_small.png)
 
+Text-only stylesheet with small font sizes.
+
 ```json
-"markdown-pdf.styles": [".../markdown-pdf-styles/styles/text-small.css"],
+{
+  "markdown-pdf.styles": [
+    ".../markdown-pdf-styles/styles/text-small.css",
+  ],
+}
 ```
 
 ### Half Columns
 
 ![Half columns style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_half.png)
 
+Layout-only stylesheet with 2 side-by-side panes.
+
 ```json
-"markdown-pdf.styles": [".../markdown-pdf-styles/styles/layout-half.css"],
+{
+  "markdown-pdf.styles": [
+    ".../markdown-pdf-styles/styles/layout-half.css",
+  ],
+}
 ```
 
 ### One-third Columns
 
 ![One-third columns style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_onethird.png)
 
+Layout-only stylesheet with 3 side-by-side panes.
+
 ```json
-"markdown-pdf.styles": [".../markdown-pdf-styles/styles/layout-onethird.css"],
+{
+  "markdown-pdf.styles": [
+    ".../markdown-pdf-styles/styles/layout-onethird.css",
+  ],
+}
 ```
 
 ### Quarter Columns
 
 ![Quarter columns style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_quarter.png)
 
+Layout-only stylesheet with 4 side-by-side panes.
+
 ```json
-"markdown-pdf.styles": [".../markdown-pdf-styles/styles/layout-quarter.css"],
+{
+  "markdown-pdf.styles": [
+    ".../markdown-pdf-styles/styles/layout-quarter.css",
+  ],
+}
 ```
 
 ### Citation
@@ -181,7 +169,11 @@ Replace variable `$LAST_NAME` to author's last name.
 Superscript and subscript won't affect line height.
 
 ```json
-"markdown-pdf.styles": [".../markdown-pdf-styles/styles/citation.css"],
+{
+  "markdown-pdf.styles": [
+    ".../markdown-pdf-styles/styles/citation.css",
+  ],
+}
 ```
 
 ### Paragraph
@@ -189,7 +181,11 @@ Superscript and subscript won't affect line height.
 Paragraph are indented and justified.
 
 ```json
-"markdown-pdf.styles": [".../markdown-pdf-styles/styles/paragraph.css"],
+{
+  "markdown-pdf.styles": [
+    ".../markdown-pdf-styles/styles/paragraph.css",
+  ],
+}
 ```
 
 ## Headers & footers
@@ -202,8 +198,10 @@ Paragraph are indented and justified.
 Replace variable `$URL` to webpage link, `$TITLE` with document title.
 
 ```json
-"markdown-pdf.headerTemplate": "<div style='font-size: 9px; margin-left: 1cm; margin-right: 1cm;'> <span>$URL</span> </div>",
-"markdown-pdf.footerTemplate": "<div style='font-size: 9px; margin-left: 1cm;'> <span>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> / <span class='totalPages'></span> </div>",
+{
+  "markdown-pdf.headerTemplate": "<div style='font-size: 9px; margin-left: 1cm; margin-right: 1cm;'> <span>$URL</span> </div>",
+  "markdown-pdf.footerTemplate": "<div style='font-size: 9px; margin-left: 1cm;'> <span>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> / <span class='totalPages'></span> </div>",
+}
 ```
 
 ### Homework
@@ -215,6 +213,8 @@ Replace variable `$SUBJECT` to student credential, `$IMAGE_BASE64` to school
 logo (10px height), `$TITLE` to document title.
 
 ```json
-"markdown-pdf.headerTemplate": "<div style='font-size: 9px; margin-left: 1cm;'> <span>$SUBJECT</span> </div> <div style='margin-left: auto; margin-right: 1cm;'> <img src='$IMAGE_BASE64'> </div>",
-"markdown-pdf.footerTemplate": "<div style='font-size: 9px; margin-left: 1cm;'> <span>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> / <span class='totalPages'></span> </div>",
+{
+  "markdown-pdf.headerTemplate": "<div style='font-size: 9px; margin-left: 1cm;'> <span>$SUBJECT</span> </div> <div style='margin-left: auto; margin-right: 1cm;'> <img src='$IMAGE_BASE64'> </div>",
+  "markdown-pdf.footerTemplate": "<div style='font-size: 9px; margin-left: 1cm;'> <span>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> / <span class='totalPages'></span> </div>",
+}
 ```

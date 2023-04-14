@@ -1,5 +1,3 @@
-/* Text-only stylesheet with normal font sizes. */
-
 body {
   font-size: 12px; /* -2px from 14px */
   line-height: 18px; /* -4px from 22px */
