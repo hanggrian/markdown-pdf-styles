@@ -4,17 +4,19 @@
 
 Stylesheets for [VSCode Markdown PDF](https://github.com/yzane/vscode-markdown-pdf/).
 
-- Pick single style:
+- Use preset styles:
   - Application default: [*Microsoft Word*](#microsoft-word), [*Apple Pages*](#apple-pages)
   - Colorful: [Essay](#essay), [Business](#business)
-  - Academic paper: [APA Style](#apa-style), [MLA Style](#mla-style)
-- Or build your own:
-  - Fonts: [Noto Sans](#noto-sans), [Noto Serif](#noto-sans)
-  - Text sizes: [Normal Size](#normal-size), [Small Size](#small-size)
-  - Layouts: [Half Columns](#half-columns), [One-third Columns](#one-third-columns),
-    [Quarter Columns](#quarter-columns)
-  - Others: [Citation](#citation), [Paragraph](#paragraph)
-- Headers & footers: [Webpage](#webpage), [Homework](#homework)
+  - Academic paper: [APA style](#apa-style), [MLA style](#mla-style)
+- Or customize using barebone styles:
+  - [Fonts](#fonts)
+  - [Texts](#texts)
+  - [Indents](#indents)
+  - [Layouts](#layouts)
+  - [Others](#others)
+- Optional headers & footers:
+  - [Webpage](#webpage)
+  - [Homework](#homework)
 
 ## Usage
 
@@ -22,178 +24,145 @@ To use the style, modify VSCode user `settings.json` according to the style
 below. A root project directory may also have `.vscode/settings.json` for
 project-wide preferences, which will override global settings.
 
-## Single styles
+## Preset styles
 
 ### *Microsoft Word*
 
-![Microsoft Word style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_word.png)
+![Preset style preview: Microsoft Word.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_word.png)
 
 Office uses clean `Calibri` font and lighter font for headlines.
 
 ### *Apple Pages*
 
-![Apple Pages style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_pages.png)
+![Preset style preview: Apple Pages.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_pages.png)
 
 iWork uses wide `Helvetica` font and ridiculously large headlines.
 
 ### Essay
 
-![Essay style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_essay.png)
+![Preset style preview: Essay.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_essay.png)
 
 Inspired by an official style in *Apple Pages* with the same name.
 
 ### Business
 
-![Business style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_business.png)
+![Preset style preview: Business.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_business.png)
 
 Inspired by an official style in *Microsoft Word* with the same name.
 
-### [APA Style](https://apastyle.apa.org/style-grammar-guidelines/paper-format/)
+### [APA style](https://apastyle.apa.org/style-grammar-guidelines/paper-format/)
 
-![APA style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_apa.png)
+![Preset style preview: APA style.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_apa.png)
 
 APA is an academic paper format with sans serif font.
 
 Replace variable `$TITLE` to article's title.
 
-### [MLA Style](https://style.mla.org/mla-format/)
+### [MLA style](https://style.mla.org/mla-format/)
 
-![MLA style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_mla.png)
+![Preset style preview: MLA style.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_mla.png)
 
 APA is an academic paper format with serif font.
 
 Replace variable `$LAST_NAME` to author's last name.
 
-## Build styles
+## Barebone styles
 
-### Noto Sans
+Only pick one in each category.
 
-![Noto Sans style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_sans.png)
+### Fonts
 
-Font-only stylesheet with Noto Sans and JetBrains Mono.
+| Sans | Serif |
+| --- | --- |
+| ![Barebone style preview: Sans font.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_font_sans.png) | ![Barebone style preview: Serif font.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_font_serif.png) |
+
+Font-only stylesheets with *Noto Sans/Serif* and *JetBrains Mono*.
 
 ```json
 {
   "markdown-pdf.styles": [
     ".../markdown-pdf-styles/styles/font-sans.css",
-  ],
-}
-```
-
-### Noto Serif
-
-![Noto Serif style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_serif.png)
-
-Font-only stylesheet with Noto Sans and JetBrains Mono.
-
-```json
-{
-  "markdown-pdf.styles": [
     ".../markdown-pdf-styles/styles/font-serif.css",
   ],
 }
 ```
 
-### Normal Size
+### Texts
 
-![Normal size style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_normal.png)
+| Normal | Small |
+| --- | --- |
+| ![Barebone style preview: Normal text.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_text_normal.png) | ![Barebone style preview: Small text.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_text_small.png) |
 
-Text-only stylesheet with normal font sizes.
+Text-only stylesheets with normal/small font size.
 
 ```json
 {
   "markdown-pdf.styles": [
     ".../markdown-pdf-styles/styles/text-normal.css",
-  ],
-}
-```
-
-### Small Size
-
-![Small size style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_small.png)
-
-Text-only stylesheet with small font sizes.
-
-```json
-{
-  "markdown-pdf.styles": [
     ".../markdown-pdf-styles/styles/text-small.css",
   ],
 }
 ```
 
-### Half Columns
+### Indents
 
-![Half columns style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_half.png)
+| Normal | Small |
+| --- | --- |
+| ![Barebone style preview: Normal indent.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_indent_normal.png) | ![Barebone style preview: Small indent.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_indent_small.png) |
 
-Layout-only stylesheet with 2 side-by-side panes.
+Paragraph are indented by small/normal margin and justified.
+
+```json
+{
+  "markdown-pdf.styles": [
+    ".../markdown-pdf-styles/styles/indent-normal.css",
+    ".../markdown-pdf-styles/styles/indent-small.css",
+  ],
+}
+```
+
+### Layouts
+
+| Half | Third | Quarter |
+| --- | --- | --- |
+| ![Barebone style preview: Half layout.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_layout_half.png) | ![Barebone style preview: Third layout.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_layout_third.png) | ![Barebone style preview: Quarter layout.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_layout_quarter.png) |
+
+Layout-only stylesheet with 2, 3, or 4 side-by-side panes.
 
 ```json
 {
   "markdown-pdf.styles": [
     ".../markdown-pdf-styles/styles/layout-half.css",
-  ],
-}
-```
-
-### One-third Columns
-
-![One-third columns style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_onethird.png)
-
-Layout-only stylesheet with 3 side-by-side panes.
-
-```json
-{
-  "markdown-pdf.styles": [
-    ".../markdown-pdf-styles/styles/layout-onethird.css",
-  ],
-}
-```
-
-### Quarter Columns
-
-![Quarter columns style preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_quarter.png)
-
-Layout-only stylesheet with 4 side-by-side panes.
-
-```json
-{
-  "markdown-pdf.styles": [
+    ".../markdown-pdf-styles/styles/layout-third.css",
     ".../markdown-pdf-styles/styles/layout-quarter.css",
   ],
 }
 ```
 
-### Citation
+### Others
 
-Superscript and subscript won't affect line height.
+#### Reference
 
-```json
-{
-  "markdown-pdf.styles": [
-    ".../markdown-pdf-styles/styles/citation.css",
-  ],
-}
-```
-
-### Paragraph
-
-Paragraph are indented and justified.
+At the moment, manually adding `sup` or `sub` affect line height. This CSS file
+is a hotfix to that behavior.
 
 ```json
 {
   "markdown-pdf.styles": [
-    ".../markdown-pdf-styles/styles/paragraph.css",
+    ".../markdown-pdf-styles/styles/reference.css",
   ],
 }
 ```
 
 ## Headers & footers
 
+Template for header and footer needs to be embedded in the settings.
+
 ### Webpage
 
-![Webpage header preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/header_webpage.png)
-![Webpage footer preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/footer_webpage.png)
+| Header | Footer |
+| --- | --- |
+| ![Webpage header preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/header_webpage.png) | ![Webpage footer preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/footer_webpage.png) |
 
 Replace variable `$URL` to webpage link, `$TITLE` with document title.
 
@@ -206,8 +175,9 @@ Replace variable `$URL` to webpage link, `$TITLE` with document title.
 
 ### Homework
 
-![Homework header preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/header_homework.png)
-![Homework footer preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/footer_homework.png)
+| Header | Footer |
+| --- | --- |
+| ![Homework header preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/header_homework.png) | ![Homework footer preview.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/footer_homework.png) |
 
 Replace variable `$SUBJECT` to student credential, `$IMAGE_BASE64` to school
 logo (10px height), `$TITLE` to document title.

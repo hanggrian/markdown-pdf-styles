@@ -1,5 +1,5 @@
-@import 'styles/citation.css';
-@import 'styles/paragraph.css';
+@import 'styles/indent-normal.css';
+@import 'styles/reference.css';
 @import url('https://fonts.googleapis.com/css?family=Calibri:400,700,400italic,700italic');
 
 body {

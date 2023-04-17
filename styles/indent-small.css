@@ -1,0 +1,9 @@
+p {
+  text-align: justify;
+  text-indent: 0.25in;
+}
+
+blockquote > p {
+  text-align: left;
+  text-indent: 0in;
+}
