@@ -1,0 +1,48 @@
+body {
+  padding: 0; /* use custom margin */
+
+  font-family: 'Times New Roman', serif;
+  font-weight: normal;
+}
+
+.title > p {
+  text-align: center;
+  font-size: 24pt;
+}
+
+.authors {
+  display: flex;
+  justify-content: center;
+
+  font-size: 9pt;
+  line-height: 1;
+} .authors > p {
+  width: 175px;
+  font-size: 9pt;
+  text-align: center;
+}
+
+.content {
+  column-count: 2;
+} .content > * {
+  font-size: 10pt;
+  line-height: 0.95;
+} .content > h1 {
+  font-weight: normal;
+  font-size: 24pt;
+} .content > h2 {
+  font-weight: normal;
+  font-size: 12pt;
+  font-variant: small-caps;
+} .content > h3, h4, h5, h6 {
+  font-style: italic;
+  font-size: 10pt;
+} .content > small {
+  font-size: 8pt;
+} .content > p {
+  text-align: justify;
+  text-indent: 0.2in;
+} .content > blockquote > p {
+  text-align: left;
+  text-indent: 0in;
+}

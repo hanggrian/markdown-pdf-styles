@@ -7,7 +7,7 @@ Stylesheets for [VSCode Markdown PDF](https://github.com/yzane/vscode-markdown-p
 - Use preset styles:
   - Application default: [*Microsoft Word*](#microsoft-word), [*Apple Pages*](#apple-pages)
   - Colorful: [Essay](#essay), [Business](#business)
-  - Academic paper: [APA style](#apa-style), [MLA style](#mla-style)
+  - Academic paper: [IEEE style](#ieee-style), [APA style](#apa-style), [MLA style](#mla-style)
 - Or customize using barebone styles:
   - [Fonts](#fonts)
   - [Texts](#texts)
@@ -50,6 +50,29 @@ Inspired by an official style in *Apple Pages* with the same name.
 
 Inspired by an official style in *Microsoft Word* with the same name.
 
+### [IEEE style](https://www.ieee.org/conferences/publishing/templates.html)
+
+![Preset style preview: IEEE style.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_ieee.png)
+
+IEEE is an academic paper format with double column and serif font.
+
+```markdown
+::: title
+Paper Title* (use style: paper title)
+:::
+
+::: authors
+Given Name Surname<br>name of organization
+:::
+
+::: content
+*Abstract—This electronic document is a “live” template and already defines the
+components of your paper [title, text, heads, etc.] in its style sheet.
+\*CRITICAL: Do Not Use Symbols, Special Characters, Footnotes, or Math in Paper
+Title or Abstract. (Abstract)*
+:::
+```
+
 ### [APA style](https://apastyle.apa.org/style-grammar-guidelines/paper-format/)
 
 ![Preset style preview: APA style.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_apa.png)
@@ -62,13 +85,13 @@ Replace variable `$TITLE` to article's title.
 
 ![Preset style preview: MLA style.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_mla.png)
 
-APA is an academic paper format with serif font.
+MLA is an academic paper format with serif font.
 
 Replace variable `$LAST_NAME` to author's last name.
 
 ## Barebone styles
 
-Only pick one in each category.
+Only pick at maximum one in each category.
 
 ### Fonts
 

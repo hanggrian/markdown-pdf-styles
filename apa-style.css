@@ -1,4 +1,3 @@
-@import 'styles/indent-normal.css';
 @import 'styles/reference.css';
 @import url('https://fonts.googleapis.com/css?family=Calibri:400,700,400italic,700italic');
 
@@ -20,4 +19,14 @@ h1, h2, h3, h4, h5, h6 {
 code {
 	font-family: 'Courier New', monospace;
   font-weight: normal;
+}
+
+p {
+  text-align: justify;
+  text-indent: 0.5in;
+}
+
+blockquote > p {
+  text-align: left;
+  text-indent: 0in;
 }

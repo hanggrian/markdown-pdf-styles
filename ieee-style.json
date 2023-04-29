@@ -1,0 +1,10 @@
+{
+  "markdown-pdf.format": "Letter",
+  "markdown-pdf.styles": ["ieee-style.css"],
+  "markdown-pdf.margin.top": "0.75in",
+  "markdown-pdf.margin.bottom": "1in",
+  "markdown-pdf.margin.right": "0.63in",
+  "markdown-pdf.margin.left": "0.63in",
+  "markdown-pdf.headerTemplate": "<div> </div>",
+  "markdown-pdf.footerTemplate": "<div> </div>",
+}
