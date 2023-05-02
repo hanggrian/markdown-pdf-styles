@@ -1,7 +1,0 @@
-{
-  "markdown-pdf.styles": ["business.css"],
-  "markdown-pdf.margin.top": "1.32in",
-  "markdown-pdf.margin.bottom": "1in",
-  "markdown-pdf.margin.right": "0.7in",
-  "markdown-pdf.margin.left": "0.7in",
-}

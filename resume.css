@@ -1,0 +1,38 @@
+@import 'styles/font-serif.css';
+@import 'styles/text-normal.css';
+
+body {
+  padding: 0; /* use custom margin */
+}
+
+h1, h2 {
+  border-bottom: none;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 12pt;
+  text-transform: uppercase;
+}
+
+.name > p {
+  font-weight: bold;
+  font-size: 20pt;
+  text-align: center;
+
+  margin-bottom: 16px;
+}
+
+.job > p {
+  font-size: 12pt;
+  text-align: center;
+
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.contact {
+  text-align: center;
+
+  margin-top: 32px;
+}

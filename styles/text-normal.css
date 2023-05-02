@@ -1,19 +1,50 @@
 body {
-  font-size: 12px; /* -2px from 14px */
-  line-height: 18px; /* -4px from 22px */
+  font-size: 11pt;
+  line-height: 16pt;
+}
+
+h1 {
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 11pt;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 11pt;
+  font-weight: bold;
+  color: #777;
 }
 
 code {
-  font-size: 12px; /* -2px from 14px */
-  line-height: 15px; /* -4px from 19px */
+  font-size: 11pt;
+  line-height: 14pt;
 }
 
 pre:not(.hljs),
 pre.hljs code > div {
-	padding: 12px; /* -4px from 16px */
+	padding: 4pt;
 }
 
 pre:not(.hljs) {
-	padding: 19px; /* -4px from 23px */
-	line-height: 15px; /* -4px from 19px */
+	padding: 6pt;
+	line-height: 4pt;
 }

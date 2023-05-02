@@ -5,6 +5,6 @@
   "markdown-pdf.margin.bottom": "1in",
   "markdown-pdf.margin.right": "1in",
   "markdown-pdf.margin.left": "1in",
-  "markdown-pdf.headerTemplate": "<div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span>$LAST_NAME</span> <span class='pageNumber'></span> </div>",
+  "markdown-pdf.headerTemplate": "<div style='font-size: 7pt; margin-left: auto; margin-right: 1cm;'> <span>$LAST_NAME</span> <span class='pageNumber'></span> </div>",
   "markdown-pdf.footerTemplate": "<div> </div>",
 }

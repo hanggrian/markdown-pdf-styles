@@ -1,0 +1,27 @@
+@import 'styles/font-serif.css';
+@import 'styles/indent-normal.css';
+@import 'styles/text-normal.css';
+
+body {
+  padding: 0; /* use custom margin */
+}
+
+.attributions > p {
+  line-height: 2.0;
+}
+
+.title > p {
+  font-size: 28pt;
+  text-align: center;
+
+  margin-top: 64px;
+  margin-bottom: 16px;
+}
+
+.subtitle > p {
+  font-size: 16pt;
+  text-align: center;
+
+  margin-top: 16px;
+  margin-bottom: 32px;
+}

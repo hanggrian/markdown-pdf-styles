@@ -5,9 +5,8 @@
 Stylesheets for [VSCode Markdown PDF](https://github.com/yzane/vscode-markdown-pdf/).
 
 - Use preset styles:
-  - Application default: [*Microsoft Word*](#microsoft-word), [*Apple Pages*](#apple-pages)
-  - Colorful: [Essay](#essay), [Business](#business)
-  - Academic paper: [IEEE style](#ieee-style), [APA style](#apa-style), [MLA style](#mla-style)
+  - Classic: [Report](#report), [Letter](#letter), [Resume](#resume)
+  - Academic: [IEEE](#ieee), [APA](#apa), [MLA](#mla)
 - Or customize using barebone styles:
   - [Fonts](#fonts)
   - [Texts](#texts)
@@ -26,35 +25,77 @@ project-wide preferences, which will override global settings.
 
 ## Preset styles
 
-### *Microsoft Word*
+### Report
 
-![Preset style preview: Microsoft Word.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_word.png)
+![Preset style preview: Report.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_report.png)
 
-Office uses clean `Calibri` font and lighter font for headlines.
+Replace variable `$TITLE` to report's title.
 
-### *Apple Pages*
+```markdown
+::: attributions
+Urna Semper<br>Instructor’s Name<br>March 13, 2023
+:::
 
-![Preset style preview: Apple Pages.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_pages.png)
+::: title
+Geology 101 Report
+:::
 
-iWork uses wide `Helvetica` font and ridiculously large headlines.
+::: subtitle
+Sed et lacus quis enim mattis nonummy
+:::
 
-### Essay
+Lorem ipsum...
+```
 
-![Preset style preview: Essay.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_essay.png)
+### Letter
 
-Inspired by an official style in *Apple Pages* with the same name.
+![Preset style preview: Letter.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_letter.png)
 
-### Business
+```markdown
+::: sender
+Sender Name
+:::
 
-![Preset style preview: Business.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_business.png)
+::: contact
+1234 Main Street<br>Anytown, State ZIP<br>123-456-7890<br>no_reply@example.com
+:::
 
-Inspired by an official style in *Microsoft Word* with the same name.
+29 April 2023
 
-### [IEEE style](https://www.ieee.org/conferences/publishing/templates.html)
+::: recipient
+Recipient Name<br>4321 First Street<br>Anytown, State ZIP
+:::
 
-![Preset style preview: IEEE style.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_ieee.png)
+Lorem ipsum...
+```
 
-IEEE is an academic paper format with double column and serif font.
+### Resume
+
+![Preset style preview: Resume.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_resume.png)
+
+```markdown
+::: name
+Your Name
+:::
+
+::: job
+Job Title
+:::
+
+# Profile
+
+Lorem ipsum...
+
+::: contact
+1234 Main Street Anytown, State ZIP&emsp;123-456-7890<br>no_reply@example.com&emsp;@social_media
+:::
+```
+
+### [IEEE](https://www.ieee.org/conferences/publishing/templates.html)
+
+![Preset style preview: IEEE.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_ieee.png)
+
+IEEE style is an academic paper format with double column and serif font.
 
 ```markdown
 ::: title
@@ -66,30 +107,32 @@ Given Name Surname<br>name of organization
 :::
 
 ::: content
-*Abstract—This electronic document is a “live” template and already defines the
-components of your paper [title, text, heads, etc.] in its style sheet.
-\*CRITICAL: Do Not Use Symbols, Special Characters, Footnotes, or Math in Paper
-Title or Abstract. (Abstract)*
+Lorem ipsum...
+:::
+
+::: references
+1. Awesome article
+2. ...
 :::
 ```
 
-### [APA style](https://apastyle.apa.org/style-grammar-guidelines/paper-format/)
+### [APA](https://apastyle.apa.org/style-grammar-guidelines/paper-format/)
 
-![Preset style preview: APA style.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_apa.png)
+![Preset style preview: APA.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_apa.png)
 
-APA is an academic paper format with sans serif font.
+APA style is an academic paper format with sans serif font.
 
 Replace variable `$TITLE` to article's title.
 
-### [MLA style](https://style.mla.org/mla-format/)
+### [MLA](https://style.mla.org/mla-format/)
 
-![Preset style preview: MLA style.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_mla.png)
+![Preset style preview: MLA.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/style_mla.png)
 
-MLA is an academic paper format with serif font.
+MLA style is an academic paper format with serif font.
 
 Replace variable `$LAST_NAME` to author's last name.
 
-## Barebone styles
+## Custom styles
 
 Only pick at maximum one in each category.
 
@@ -97,7 +140,7 @@ Only pick at maximum one in each category.
 
 | Sans | Serif |
 | --- | --- |
-| ![Barebone style preview: Sans font.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_font_sans.png) | ![Barebone style preview: Serif font.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_font_serif.png) |
+| ![Custom style preview: Sans font.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_font_sans.png) | ![Custom style preview: Serif font.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_font_serif.png) |
 
 Font-only stylesheets with *Noto Sans/Serif* and *JetBrains Mono*.
 
@@ -114,7 +157,7 @@ Font-only stylesheets with *Noto Sans/Serif* and *JetBrains Mono*.
 
 | Normal | Small |
 | --- | --- |
-| ![Barebone style preview: Normal text.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_text_normal.png) | ![Barebone style preview: Small text.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_text_small.png) |
+| ![Custom style preview: Normal text.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_text_normal.png) | ![Custom style preview: Small text.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_text_small.png) |
 
 Text-only stylesheets with normal/small font size.
 
@@ -131,7 +174,7 @@ Text-only stylesheets with normal/small font size.
 
 | Normal | Small |
 | --- | --- |
-| ![Barebone style preview: Normal indent.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_indent_normal.png) | ![Barebone style preview: Small indent.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_indent_small.png) |
+| ![Custom style preview: Normal indent.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_indent_normal.png) | ![Custom style preview: Small indent.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_indent_small.png) |
 
 Paragraph are indented by small/normal margin and justified.
 
@@ -148,7 +191,7 @@ Paragraph are indented by small/normal margin and justified.
 
 | Half | Third | Quarter |
 | --- | --- | --- |
-| ![Barebone style preview: Half layout.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_layout_half.png) | ![Barebone style preview: Third layout.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_layout_third.png) | ![Barebone style preview: Quarter layout.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_layout_quarter.png) |
+| ![Custom style preview: Half layout.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_layout_half.png) | ![Custom style preview: Third layout.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_layout_third.png) | ![Custom style preview: Quarter layout.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/styles_layout_quarter.png) |
 
 Layout-only stylesheet with 2, 3, or 4 side-by-side panes.
 
@@ -191,8 +234,8 @@ Replace variable `$URL` to webpage link, `$TITLE` with document title.
 
 ```json
 {
-  "markdown-pdf.headerTemplate": "<div style='font-size: 9px; margin-left: 1cm; margin-right: 1cm;'> <span>$URL</span> </div>",
-  "markdown-pdf.footerTemplate": "<div style='font-size: 9px; margin-left: 1cm;'> <span>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> / <span class='totalPages'></span> </div>",
+  "markdown-pdf.headerTemplate": "<div style='font-size: 7pt; margin-left: 1cm; margin-right: 1cm;'> <span>$URL</span> </div>",
+  "markdown-pdf.footerTemplate": "<div style='font-size: 7pt; margin-left: 1cm;'> <span>$TITLE</span> </div> <div style='font-size: 7pt; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> / <span class='totalPages'></span> </div>",
 }
 ```
 
@@ -207,7 +250,7 @@ logo (10px height), `$TITLE` to document title.
 
 ```json
 {
-  "markdown-pdf.headerTemplate": "<div style='font-size: 9px; margin-left: 1cm;'> <span>$SUBJECT</span> </div> <div style='margin-left: auto; margin-right: 1cm;'> <img src='$IMAGE_BASE64'> </div>",
-  "markdown-pdf.footerTemplate": "<div style='font-size: 9px; margin-left: 1cm;'> <span>$TITLE</span> </div> <div style='font-size: 9px; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> / <span class='totalPages'></span> </div>",
+  "markdown-pdf.headerTemplate": "<div style='font-size: 7pt; margin-left: 1cm;'> <span>$SUBJECT</span> </div> <div style='margin-left: auto; margin-right: 1cm;'> <img src='$IMAGE_BASE64'> </div>",
+  "markdown-pdf.footerTemplate": "<div style='font-size: 7pt; margin-left: 1cm;'> <span>$TITLE</span> </div> <div style='font-size: 7pt; margin-left: auto; margin-right: 1cm;'> <span class='pageNumber'></span> / <span class='totalPages'></span> </div>",
 }
 ```

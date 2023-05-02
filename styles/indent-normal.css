@@ -1,9 +1,9 @@
-p {
+body > p {
   text-align: justify;
   text-indent: 0.4in;
 }
 
-blockquote > p {
+body > blockquote > p {
   text-align: left;
   text-indent: 0in;
 }

@@ -1,0 +1,33 @@
+@import 'styles/font-serif.css';
+@import 'styles/text-normal.css';
+
+body {
+  padding: 0; /* use custom margin */
+}
+
+.sender > p {
+  font-weight: bold;
+  font-size: 20pt;
+  text-align: center;
+
+  margin-bottom: 24px;
+}
+
+.contact > p {
+  line-height: 1.5;
+  text-align: center;
+
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.recipient > p {
+  line-height: 1.5;
+  
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.signature > p {
+  margin-top: 48px;
+}
