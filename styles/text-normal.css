@@ -41,10 +41,10 @@ code {
 
 pre:not(.hljs),
 pre.hljs code > div {
-	padding: 4pt;
+	padding: 6pt;
 }
 
 pre:not(.hljs) {
-	padding: 6pt;
-	line-height: 4pt;
+	padding: 8pt;
+	line-height: 6pt;
 }

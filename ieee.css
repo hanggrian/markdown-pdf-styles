@@ -58,9 +58,9 @@ body {
 }
 
 .references > ol {
-  padding-inline-start: 20px; /* down from 40px */
+  padding-inline-start: 20px; /* from 40px */
 } .references > ul {
-  padding-inline-start: 20px; /* down from 40px */
+  padding-inline-start: 20px; /* from 40px */
 } .references > * > li {
   font-size: 8pt;
   line-height: 9pt;

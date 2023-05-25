@@ -1,3 +1,4 @@
 body {
   column-count: 3;
+  column-gap: 0.3in;
 }
