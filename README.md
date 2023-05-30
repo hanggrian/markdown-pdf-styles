@@ -108,7 +108,6 @@ Given Name Surname<br>name of organization
 
 ::: content
 Lorem ipsum...
-:::
 
 ::: references
 1. Awesome article

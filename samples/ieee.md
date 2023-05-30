@@ -2,23 +2,21 @@
 <!-- TODO: incorporate KaTeX -->
 
 ::: title
-Paper Title* (use style: paper title)
+Paper Title* (use style: *paper title*)
 :::
 
 ::: authors
-line 1: 1st Given Name Surname<br>line 2: dept. name of organization (of Affiliation)<br>line 3: name of organization (of Affiliation)<br>line 4: City, Country<br>line 5: email address or ORCID
+line 1: 1st Given Name Surname<br>line 2: *dept. name of organization (of Affiliation)*<br>line 3: *name of organization (of Affiliation)*<br>line 4: City, Country<br>line 5: email address or ORCID
 
-line 1: 2nd Given Name Surname<br>line 2: dept. name of organization (of Affiliation)<br>line 3: name of organization (of Affiliation)<br>line 4: City, Country<br>line 5: email address or ORCID
+line 1: 2nd Given Name Surname<br>line 2: *dept. name of organization (of Affiliation)*<br>line 3: *name of organization (of Affiliation)*<br>line 4: City, Country<br>line 5: email address or ORCID
 
-line 1: 3rd Given Name Surname<br>line 2: dept. name of organization (of Affiliation)<br>line 3: name of organization (of Affiliation)<br>line 4: City, Country<br>line 5: email address or ORCID
+line 1: 3rd Given Name Surname<br>line 2: *dept. name of organization (of Affiliation)*<br>line 3: *name of organization (of Affiliation)*<br>line 4: City, Country<br>line 5: email address or ORCID
 
-line 1: 4th Given Name Surname<br>line 2: dept. name of organization (of Affiliation)<br>line 3: name of organization (of Affiliation)<br>line 4: City, Country<br>line 5: email address or ORCID
-:::
+line 1: 4th Given Name Surname<br>line 2: *dept. name of organization (of Affiliation)*<br>line 3: *name of organization (of Affiliation)*<br>line 4: City, Country<br>line 5: email address or ORCID
 
-::: authors
-line 1: 5th Given Name Surname<br>line 2: dept. name of organization (of Affiliation)<br>line 3: name of organization (of Affiliation)<br>line 4: City, Country<br>line 5: email address or ORCID
+line 1: 5th Given Name Surname<br>line 2: *dept. name of organization (of Affiliation)*<br>line 3: *name of organization (of Affiliation)*<br>line 4: City, Country<br>line 5: email address or ORCID
 
-line 1: 6th Given Name Surname<br>line 2: dept. name of organization (of Affiliation)<br>line 3: name of organization (of Affiliation)<br>line 4: City, Country<br>line 5: email address or ORCID
+line 1: 6th Given Name Surname<br>line 2: *dept. name of organization (of Affiliation)*<br>line 3: *name of organization (of Affiliation)*<br>line 4: City, Country<br>line 5: email address or ORCID
 :::
 
 ::: content
@@ -114,7 +112,6 @@ more compact, you may use the solidus ( / ), the exp function, or appropriate
 exponents. Italicize Roman symbols for quantities and variables, but not Greek
 symbols. Use a long dash rather than a hyphen for a minus sign. Punctuate
 equations with commas or periods when they are part of a sentence, as in:
-:::
 
 ## References
 
@@ -144,4 +141,8 @@ first, followed by the original foreign-language citation [6].
 5. R. Nicole, “Title of paper with only first word capitalized,” J. Name Stand. Abbrev., in press.
 6. Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, “Electron spectroscopy studies on magneto-optical media and plastic substrate interface,” IEEE Transl. J. Magn. Japan, vol. 2, pp. 740–741, August 1987 [Digests 9th Annual Conf. Magnetics Japan, p. 301, 1982].
 7. M. Young, The Technical Writer’s Handbook. Mill Valley, CA: University Science, 1989.
+8. a
+9. a
+10. a
+11. a
 :::

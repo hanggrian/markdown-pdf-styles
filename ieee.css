@@ -8,19 +8,21 @@ body {
 .title > p {
   text-align: center;
   font-size: 24pt;
+  line-height: 1.0;
 
-  margin-bottom: 16px;
+  margin-bottom: 34px;
 }
 
 .authors {
   display: flex;
   justify-content: center;
-
+  flex-wrap: wrap;
   font-size: 9pt;
+  gap: 12px;
   line-height: 1.0;
 
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 34px;
+  margin-bottom: 24px;
 } .authors > p {
   width: 175px;
   font-size: 9pt;
@@ -29,10 +31,10 @@ body {
 
 .content {
   column-count: 2;
-  column-width: 3.346in;
-  column-gap: 0.375in;
+  column-width: 3.44in; /* from 3.45in */
+  column-gap: 0.2in;
 
-  margin-top: 16px;
+  margin-top: 18px;
 } .content > * {
   font-size: 10pt;
   line-height: 0.95;
@@ -47,23 +49,43 @@ body {
 } .content > h3, h4, h5, h6 {
   font-style: italic;
   font-size: 10pt;
+} .content > .hljs > code {
+	font-family: 'JetBrains Mono', monospace;
+  font-weight: normal;
+  font-size: 7pt;
+  line-height: 10pt;
+} .content > pre:not(.hljs), pre.hljs code > div {
+	padding: 2pt;
+} .content > pre:not(.hljs) {
+	padding: 4pt;
+	line-height: 2pt;
 } .content > small {
   font-size: 8pt;
 } .content > p {
   text-align: justify;
   text-indent: 0.2in;
+} .content > p > img, .content > p > small {
+  margin-left: -0.2in; /* hotfix */
 } .content > blockquote > p {
   text-align: left;
   text-indent: 0in;
 }
 
 .references > ol {
-  padding-inline-start: 20px; /* from 40px */
-} .references > ul {
-  padding-inline-start: 20px; /* from 40px */
-} .references > * > li {
+  counter-reset: list;
+  display: table;
+  padding-inline-start: 0px;
+} .references > ol > li {
+  counter-increment: list;
+  display: table-row;
+  text-align: justify;
   font-size: 8pt;
   line-height: 9pt;
-} .references > * > li:not(:last-child) {
-  margin-bottom: 4px;
+} .references > ol > li:before {
+  content: "[" counter(list) "] ";
+  display: table-cell;
+  text-align: right;
+  padding-right: 4px;
+} .references > ol > li:not(:last-child) {
+  margin-bottom: 2.5pt;
 }
