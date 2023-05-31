@@ -1,6 +1,6 @@
 {
   "markdown-pdf.format": "A4",
-  "markdown-pdf.styles": ["mla-style.css"],
+  "markdown-pdf.styles": [".../markdown-pdf-styles/mla.css"],
   "markdown-pdf.margin.top": "1in",
   "markdown-pdf.margin.bottom": "1in",
   "markdown-pdf.margin.right": "1in",

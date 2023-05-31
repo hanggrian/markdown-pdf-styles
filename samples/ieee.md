@@ -20,19 +20,19 @@ line 1: 6th Given Name Surname<br>line 2: *dept. name of organization (of Affili
 :::
 
 ::: content
-*Abstract—This electronic document is a “live” template and already defines the
+**_Abstract—This electronic document is a “live” template and already defines the
 components of your paper [title, text, heads, etc.] in its style sheet.
 \*CRITICAL: Do Not Use Symbols, Special Characters, Footnotes, or Math in Paper
-Title or Abstract. (Abstract)*
+Title or Abstract. (Abstract)_**
 
-*Keywords—component, formatting, style, styling, insert (key words)*
+**_Keywords—component, formatting, style, styling, insert (key words)_**
 
 ## I. Introduction (Heading 1)
 
 This template, modified in MS Word 2007 and saved as a “Word 97-2003 Document”
 for the PC, provides authors with most of the formatting specifications needed
 for preparing electronic versions of their papers. All standard paper components
-have b een specified for three reasons: (1) ease of use when formatting
+have been specified for three reasons: (1) ease of use when formatting
 individual papers, (2) automatic compliance to electronic requirements that
 facilitate the concurrent or later production of electronic products, and (3)
 conformity of style throughout a conference proceedings. Margins, column widths,

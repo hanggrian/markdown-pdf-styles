@@ -1,6 +1,5 @@
 body {
   font-size: 10pt;
-  line-height: 14pt;
 }
 
 h1 {
@@ -37,7 +36,6 @@ h6 {
 
 code {
   font-size: 9pt;
-  line-height: 12pt;
 }
 
 pre:not(.hljs),
@@ -47,5 +45,4 @@ pre.hljs code > div {
 
 pre:not(.hljs) {
 	padding: 6pt;
-	line-height: 4pt;
 }

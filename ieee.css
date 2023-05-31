@@ -53,12 +53,12 @@ body {
 	font-family: 'JetBrains Mono', monospace;
   font-weight: normal;
   font-size: 7pt;
-  line-height: 10pt;
+  line-height: 0.95;
 } .content > pre:not(.hljs), pre.hljs code > div {
 	padding: 2pt;
 } .content > pre:not(.hljs) {
 	padding: 4pt;
-	line-height: 2pt;
+  line-height: 0.95;
 } .content > small {
   font-size: 8pt;
 } .content > p {

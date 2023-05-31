@@ -1,6 +1,6 @@
 {
   "markdown-pdf.format": "Letter",
-  "markdown-pdf.styles": ["apa-style.css"],
+  "markdown-pdf.styles": [".../markdown-pdf-styles/apa.css"],
   "markdown-pdf.margin.top": "1in",
   "markdown-pdf.margin.bottom": "1in",
   "markdown-pdf.margin.right": "1in",

@@ -1,0 +1,11 @@
+body {
+  line-height: 1.2; /* 1.0 may be too low, revert back to 1.2 from markdown-pdf.css */
+}
+
+code {
+  line-height: 1.0;
+}
+
+pre:not(.hljs) {
+	line-height: 1.0;
+}

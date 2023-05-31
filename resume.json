@@ -1,9 +1,8 @@
 {
-  "markdown-pdf.styles": ["resume.css"],
+  "markdown-pdf.styles": [".../markdown-pdf-styles/resume.css"],
   "markdown-pdf.margin.top": "0.83in",
   "markdown-pdf.margin.bottom": "0.75in",
   "markdown-pdf.margin.right": "1.18in",
   "markdown-pdf.margin.left": "1.18in",
-  "markdown-pdf.headerTemplate": "<div> </div>",
-  "markdown-pdf.footerTemplate": "<div> </div>",
+  "markdown-pdf.displayHeaderFooter": false,
 }
