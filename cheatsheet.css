@@ -1,0 +1,53 @@
+@import 'styles/font-sans.css';
+
+body {
+  padding: 0; /* use custom margin */
+  font-size: 7pt;
+  line-height: 1.0;
+}
+
+h1 {
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 11pt;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 9pt;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 8pt;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 7pt;
+  font-weight: bold;
+  color: #777;
+}
+
+code {
+  font-size: 6pt;
+  line-height: 1.0;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 2pt;
+}
+
+pre:not(.hljs) {
+	padding: 4pt;
+	line-height: 1.0;
+}

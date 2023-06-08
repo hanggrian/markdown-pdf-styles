@@ -1,0 +1,8 @@
+{
+  "markdown-pdf.styles": [".../markdown-pdf-styles/cheatsheet.css"],
+  "markdown-pdf.margin.top": "0.25in",
+  "markdown-pdf.margin.bottom": "0.25in",
+  "markdown-pdf.margin.right": "0.25in",
+  "markdown-pdf.margin.left": "0.25in",
+  "markdown-pdf.displayHeaderFooter": false,
+}

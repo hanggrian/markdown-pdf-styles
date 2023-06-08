@@ -7,6 +7,7 @@ Stylesheets for [VSCode Markdown PDF](https://github.com/yzane/vscode-markdown-p
 - Use preset styles:
   - Classic: [Report](#report), [Letter](#letter), [Resume](#resume)
   - Academic: [IEEE](#ieee), [APA](#apa), [MLA](#mla)
+  - Others: [Cheatsheet](#cheatsheet)
 - Or customize using barebone styles:
   - [Font](#font)
   - [Text](#text)
@@ -131,6 +132,12 @@ Replace variable `$TITLE` to article's title.
 MLA style is an academic paper format with serif font.
 
 Replace variable `$LAST_NAME` to author's last name.
+
+### Cheatsheet
+
+![Preset style preview: Cheatsheet.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/preset_others_cheatsheet.png)
+
+Keep as many content as possible with mini everything.
 
 ## Custom styles
 
