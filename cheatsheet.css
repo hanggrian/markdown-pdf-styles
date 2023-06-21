@@ -1,53 +1,62 @@
-@import 'styles/font-sans.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
 body {
   padding: 0; /* use custom margin */
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: normal;
   font-size: 7pt;
-  line-height: 1.0;
+  line-height: 0.9;
+  column-gap: 0.1in;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+} h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin-block-start: 0.4em;
+  margin-block-end: 0.4em;
 }
 
 h1 {
-  font-size: 12pt;
-  font-weight: bold;
-}
-
-h2 {
   font-size: 11pt;
-  font-weight: bold;
-}
-
-h3 {
+	padding-bottom: 0.2em;
+} h2 {
   font-size: 10pt;
-  font-weight: bold;
-}
-
-h4 {
+} h3 {
   font-size: 9pt;
-  font-weight: bold;
-}
-
-h5 {
+} h4 {
   font-size: 8pt;
-  font-weight: bold;
-}
-
-h6 {
+} h5 {
   font-size: 7pt;
-  font-weight: bold;
+} h6 {
+  font-size: 7pt;
   color: #777;
 }
 
+ul {
+  padding-inline-start: 14px;
+} ol {
+  padding-inline-start: 10px;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 2px;
+} table {
+  border-spacing: 0;
+}
+
 code {
+	font-family: 'JetBrains Mono', monospace;
+  font-weight: normal;
   font-size: 6pt;
-  line-height: 1.0;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
+  line-height: 0.9;
+} pre:not(.hljs), pre.hljs code > div {
 	padding: 2pt;
-}
-
-pre:not(.hljs) {
+} pre:not(.hljs) {
 	padding: 4pt;
-	line-height: 1.0;
+	line-height: 0.9;
 }
