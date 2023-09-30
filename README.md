@@ -6,7 +6,7 @@ Stylesheets for [VSCode Markdown PDF](https://github.com/yzane/vscode-markdown-p
 
 - Use preset styles:
   - Classic: [Report](#report), [Letter](#letter), [Resume](#resume)
-  - Academic: [IEEE](#ieee), [APA](#apa), [MLA](#mla)
+  - Academic: [IEEE](#ieee), [APA](#apa)
   - Others: [Cheatsheet](#cheatsheet)
 - Or customize using barebone styles:
   - [Font](#font)
@@ -105,16 +105,20 @@ Paper Title* (use style: *paper title*)
 :::
 
 ::: authors
-Given Name Surname<br>*dept. name of organization (of Affiliation)*<br>City, Country<br>email address or ORCID
+Given Name Surname<br>
+*dept. name of organization (of Affiliation)*<br>
+City, Country<br>
+email address or ORCID
 :::
 
-::: content
-Lorem Ipsum...
+:::: content
+Lorem ipsum...
 
 ::: references
 1. Awesome article
-2. ...
+2. Awesome website
 :::
+::::
 ```
 
 ### [APA](https://apastyle.apa.org/style-grammar-guidelines/paper-format/)
@@ -125,13 +129,25 @@ APA style is an academic paper format with sans serif font.
 
 Replace variable `$TITLE` to article's title.
 
-### [MLA](https://style.mla.org/mla-format/)
+```markdown
+::: title
+Paper Title
+:::
 
-![Preset style preview: Academic MLA.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/preset_academic_mla.png)
+::: subtitle
+Author Name<br>
+Department of Psychology, The George Washington University<br>
+Instructor Name<br>
+:::
 
-MLA style is an academic paper format with serif font.
+Lorem ipsum...
 
-Replace variable `$LAST_NAME` to author's last name.
+::: references
+Awesome article
+
+Awesome website
+:::
+```
 
 ### Cheatsheet
 

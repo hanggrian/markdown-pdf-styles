@@ -6,20 +6,44 @@ Paper Title* (use style: *paper title*)
 :::
 
 ::: authors
-line 1: 1st Given Name Surname<br>line 2: *dept. name of organization (of Affiliation)*<br>line 3: *name of organization (of Affiliation)*<br>line 4: City, Country<br>line 5: email address or ORCID
+line 1: 1st Given Name Surname<br>
+line 2: *dept. name of organization (of Affiliation)*<br>
+line 3: *name of organization (of Affiliation)*<br>
+line 4: City, Country<br>
+line 5: email address or ORCID
 
-line 1: 2nd Given Name Surname<br>line 2: *dept. name of organization (of Affiliation)*<br>line 3: *name of organization (of Affiliation)*<br>line 4: City, Country<br>line 5: email address or ORCID
+line 1: 2nd Given Name Surname<br>
+line 2: *dept. name of organization (of Affiliation)*<br>
+line 3: *name of organization (of Affiliation)*<br>
+line 4: City, Country<br>
+line 5: email address or ORCID
 
-line 1: 3rd Given Name Surname<br>line 2: *dept. name of organization (of Affiliation)*<br>line 3: *name of organization (of Affiliation)*<br>line 4: City, Country<br>line 5: email address or ORCID
+line 1: 3rd Given Name Surname<br>
+line 2: *dept. name of organization (of Affiliation)*<br>
+line 3: *name of organization (of Affiliation)*<br>
+line 4: City, Country<br>
+line 5: email address or ORCID
 
-line 1: 4th Given Name Surname<br>line 2: *dept. name of organization (of Affiliation)*<br>line 3: *name of organization (of Affiliation)*<br>line 4: City, Country<br>line 5: email address or ORCID
+line 1: 4th Given Name Surname<br>
+line 2: *dept. name of organization (of Affiliation)*<br>
+line 3: *name of organization (of Affiliation)*<br>
+line 4: City, Country<br>
+line 5: email address or ORCID
 
-line 1: 5th Given Name Surname<br>line 2: *dept. name of organization (of Affiliation)*<br>line 3: *name of organization (of Affiliation)*<br>line 4: City, Country<br>line 5: email address or ORCID
+line 1: 5th Given Name Surname<br>
+line 2: *dept. name of organization (of Affiliation)*<br>
+line 3: *name of organization (of Affiliation)*<br>
+line 4: City, Country<br>
+line 5: email address or ORCID
 
-line 1: 6th Given Name Surname<br>line 2: *dept. name of organization (of Affiliation)*<br>line 3: *name of organization (of Affiliation)*<br>line 4: City, Country<br>line 5: email address or ORCID
+line 1: 6th Given Name Surname<br>
+line 2: *dept. name of organization (of Affiliation)*<br>
+line 3: *name of organization (of Affiliation)*<br>
+line 4: City, Country<br>
+line 5: email address or ORCID
 :::
 
-::: content
+:::: content
 **_Abstract—This electronic document is a “live” template and already defines the
 components of your paper [title, text, heads, etc.] in its style sheet.
 \*CRITICAL: Do Not Use Symbols, Special Characters, Footnotes, or Math in Paper
@@ -146,3 +170,5 @@ first, followed by the original foreign-language citation [6].
 10. a
 11. a
 :::
+
+::::

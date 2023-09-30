@@ -14,6 +14,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Calibri, sans-serif;
   font-weight: bold;
   font-size: 12pt;
+} h2 {
+  text-align: center;
 }
 
 code {
@@ -24,9 +26,48 @@ code {
 p {
   text-align: justify;
   text-indent: 0.5in;
+
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 blockquote > p {
   text-align: left;
   text-indent: 0in;
+}
+
+/* Title and subtitle belong in the first page, followed by a page break. */
+
+.title > p {
+  font-family: Calibri, sans-serif;
+  font-weight: bold;
+  font-size: 12pt;
+  text-align: center;
+  text-indent: 0;
+
+  margin-top: 200px;
+}
+
+.subtitle > p {
+  font-family: Calibri, sans-serif;
+  font-weight: normal;
+  font-size: 11pt;
+  line-height: 2.0;
+  text-align: center;
+  text-indent: 0;
+
+  margin-top: 50px;
+}
+
+/* Abstract paragraph should not be indented. */
+
+.abstract > p {
+  text-indent: 0;
+}
+
+/* References indentation starts at second line. */
+
+.references > p {
+  margin-left: 0.5in;
+  text-indent: -0.5in;
 }

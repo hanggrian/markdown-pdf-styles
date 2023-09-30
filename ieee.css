@@ -5,6 +5,8 @@ body {
   font-weight: normal;
 }
 
+/* Title and authors at the top of the page.  */
+
 .title > p {
   text-align: center;
   font-size: 24pt;
@@ -28,6 +30,8 @@ body {
   font-size: 9pt;
   text-align: center;
 }
+
+/* Main layout that distributes children proportionally in 2 columns. */
 
 .content {
   column-count: 2;
@@ -59,16 +63,22 @@ body {
 } .content > pre:not(.hljs) {
 	padding: 4pt;
   line-height: 0.95;
-} .content > small {
-  font-size: 8pt;
 } .content > p {
   text-align: justify;
   text-indent: 0.2in;
-} .content > p > img, .content > p > small {
-  margin-left: -0.2in; /* hotfix */
+
+  margin-top: 0;
+  margin-bottom: 0;
 } .content > blockquote > p {
   text-align: left;
   text-indent: 0in;
+}
+
+/* Figures and references are within content section, use nested markdown-it-container. See more at
+   https://github.com/markdown-it/markdown-it-container/issues/36. */
+
+.figure > p {
+  font-size: 8pt;
 }
 
 .references > ol {
