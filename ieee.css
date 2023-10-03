@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Courier New';
+  src: url('fonts/Cour.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   padding: 0; /* use custom margin */
 
@@ -54,9 +61,9 @@ body {
   font-style: italic;
   font-size: 10pt;
 } .content > .hljs > code {
-	font-family: 'JetBrains Mono', monospace;
+	font-family: 'Courier New', monospace;
   font-weight: normal;
-  font-size: 7pt;
+  font-size: 8pt;
   line-height: 0.95;
 } .content > pre:not(.hljs), pre.hljs code > div {
 	padding: 2pt;
@@ -86,15 +93,16 @@ body {
   display: table;
   padding-inline-start: 0px;
 } .references > ol > li {
-  counter-increment: list;
-  display: table-row;
-  text-align: justify;
   font-size: 8pt;
   line-height: 9pt;
+
+  counter-increment: list;
+  display: table-row;
 } .references > ol > li:before {
+  text-align: right;
+
   content: "[" counter(list) "] ";
   display: table-cell;
-  text-align: right;
   padding-right: 4px;
 } .references > ol > li:not(:last-child) {
   margin-bottom: 2.5pt;

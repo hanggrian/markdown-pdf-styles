@@ -1,17 +1,23 @@
 @import 'styles/reference.css';
-@import url('https://fonts.googleapis.com/css?family=Calibri:400,700,400italic,700italic');
+
+@font-face {
+  font-family: 'Lucida Console';
+  src: url('fonts/Lucon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
   padding: 0; /* use custom margin */
 
-  font-family: Calibri, sans-serif;
+  font-family: 'Times New Roman', serif;
   font-weight: normal;
-  font-size: 11pt;
+  font-size: 12pt;
   line-height: 2.0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Calibri, sans-serif;
+  font-family: 'Times New Roman', serif;
   font-weight: bold;
   font-size: 12pt;
 } h2 {
@@ -19,8 +25,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 code {
-	font-family: 'Courier New', monospace;
+	font-family: 'Lucida Console', monospace;
   font-weight: normal;
+  font-size: 10pt;
+  line-height: 1.15;
+} pre.hljs code > div {
+	padding: 2pt;
 }
 
 p {
@@ -39,7 +49,7 @@ blockquote > p {
 /* Title and subtitle belong in the first page, followed by a page break. */
 
 .title > p {
-  font-family: Calibri, sans-serif;
+  font-family: 'Times New Roman', serif;
   font-weight: bold;
   font-size: 12pt;
   text-align: center;
@@ -49,14 +59,14 @@ blockquote > p {
 }
 
 .subtitle > p {
-  font-family: Calibri, sans-serif;
+  font-family: 'Times New Roman', serif;
   font-weight: normal;
-  font-size: 11pt;
-  line-height: 2.0;
+  font-size: 12pt;
   text-align: center;
   text-indent: 0;
 
   margin-top: 50px;
+  page-break-after: always;
 }
 
 /* Abstract paragraph should not be indented. */
@@ -68,6 +78,23 @@ blockquote > p {
 /* References indentation starts at second line. */
 
 .references > p {
-  margin-left: 0.5in;
+  text-align: left;
   text-indent: -0.5in;
+
+  margin-left: 0.5in;
+}
+
+/* Figure may be code, image, or table followed by small text note. */
+
+.figure > pre {
+  margin-bottom: 0;
+} .figure > img {
+  margin-bottom: 0;
+} .figure > table {
+  margin-bottom: 0;
+} .figure > p {
+  font-size: 10pt;
+  text-indent: 0;
+
+  margin-top: 0;
 }
