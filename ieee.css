@@ -60,6 +60,8 @@ body {
 } .content > h3, h4, h5, h6 {
   font-style: italic;
   font-size: 10pt;
+} .content > small {
+  font-size: 7pt;
 } .content > .hljs > code {
 	font-family: 'Courier New', monospace;
   font-weight: normal;

@@ -34,6 +34,10 @@ h1 {
   color: #777;
 }
 
+small {
+  font-size: 5pt;
+}
+
 ul {
   padding-inline-start: 14px;
 } ol {

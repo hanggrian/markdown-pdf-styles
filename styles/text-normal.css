@@ -33,6 +33,10 @@ h6 {
   color: #777;
 }
 
+small {
+  font-size: 8pt;
+}
+
 code {
   font-size: 11pt;
 }

@@ -24,6 +24,10 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+small {
+  font-size: 8pt;
+}
+
 code {
 	font-family: 'Lucida Console', monospace;
   font-weight: normal;
