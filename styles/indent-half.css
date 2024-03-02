@@ -7,3 +7,10 @@ body > blockquote > p {
   text-align: left;
   text-indent: 0in;
 }
+
+/* Use this ID to ignore indentation. */
+
+.no-indent > p {
+  text-align: left;
+  text-indent: 0in;
+}
