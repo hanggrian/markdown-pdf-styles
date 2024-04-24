@@ -158,17 +158,19 @@ For papers published in translation journals, please give the English citation
 first, followed by the original foreign-language citation [6].
 
 ::: references
-1. G. Eason, B. Noble, and I. N. Sneddon, “On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,” Phil. Trans. Roy. Soc. London, vol. A247, pp. 529–551, April 1955. (references)
-2. J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68–73.
-3. I. S. Jacobs and C. P. Bean, “Fine particles, thin films and exchange anisotropy,” in Magnetism, vol. III, G. T. Rado and H. Suhl, Eds. New York: Academic, 1963, pp. 271–350.
-4. K. Elissa, “Title of paper if known,” unpublished.
-5. R. Nicole, “Title of paper with only first word capitalized,” J. Name Stand. Abbrev., in press.
-6. Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, “Electron spectroscopy studies on magneto-optical media and plastic substrate interface,” IEEE Transl. J. Magn. Japan, vol. 2, pp. 740–741, August 1987 [Digests 9th Annual Conf. Magnetics Japan, p. 301, 1982].
-7. M. Young, The Technical Writer’s Handbook. Mill Valley, CA: University Science, 1989.
-8. a
-9. a
-10. a
-11. a
+1.  G. Eason, B. Noble, and I. N. Sneddon, “On certain integrals of
+    Lipschitz-Hankel type involving products of Bessel functions,” Phil. Trans. Roy. Soc. London, vol. A247, pp. 529–551, April 1955. (references)
+1.  J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2.
+    Oxford: Clarendon, 1892, pp.68–73.
+1.  I. S. Jacobs and C. P. Bean, “Fine particles, thin films and exchange
+    anisotropy,” in Magnetism, vol. III, G. T. Rado and H. Suhl, Eds. New York: Academic, 1963, pp. 271–350.
+1.  K. Elissa, “Title of paper if known,” unpublished.
+1.  R. Nicole, “Title of paper with only first word capitalized,” J. Name Stand.
+    Abbrev., in press.
+1.  Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, “Electron spectroscopy studies
+    on magneto-optical media and plastic substrate interface,” IEEE Transl. J. Magn. Japan, vol. 2, pp. 740–741, August 1987 [Digests 9th Annual Conf. Magnetics Japan, p. 301, 1982].
+1.  M. Young, The Technical Writer’s Handbook. Mill Valley, CA: University
+    Science, 1989.
 :::
 
 ::::

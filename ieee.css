@@ -78,6 +78,8 @@ body {
 
   margin-top: 0;
   margin-bottom: 0;
+} .content > p > img {
+  margin-left: -0.2in;
 } .content > blockquote > p {
   text-align: left;
   text-indent: 0in;
