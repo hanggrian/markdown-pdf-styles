@@ -3,14 +3,23 @@ body > p {
   text-indent: 0.5in;
 }
 
-body > blockquote > p {
+body > ul > li,
+body > ol > li {
+  text-align: justify;
+}
+
+body > blockquote > p,
+body > blockquote > ul > li,
+body > blockquote > ol > li  {
   text-align: left;
   text-indent: 0in;
 }
 
 /* Use this ID to ignore indentation. */
 
-.no-indent > p {
+.no-indent > p,
+.no-indent > ul > li,
+.no-indent > ol > li {
   text-align: left;
   text-indent: 0in;
 }

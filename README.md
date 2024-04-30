@@ -115,8 +115,8 @@ email address or ORCID
 Lorem ipsum...
 
 ::: references
-1. Awesome article
-2. Awesome website
+1.  Awesome article
+1.  Awesome website
 :::
 ::::
 ```
@@ -161,9 +161,9 @@ Only pick at maximum one in each category.
 
 ### Font
 
-| Sans | Serif |
-| --- | --- |
-| ![Custom style preview: Sans font family.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_font_sans.png) | ![Custom style preview: Serif font family.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_font_serif.png) |
+Sans | Serif
+--- | ---
+![Custom style preview: Sans font family.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_font_sans.png) | ![Custom style preview: Serif font family.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_font_serif.png)
 
 Font family stylesheets with *Noto Sans/Serif* and *JetBrains Mono*, the default
 is system fonts.
@@ -179,9 +179,9 @@ is system fonts.
 
 ### Text
 
-| Small | Normal |
-| --- | --- |
-| ![Custom style preview: Small text size.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_text_small.png) | ![Custom style preview: Normal text size.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_text_normal.png) |
+Small | Normal
+--- | ---
+![Custom style preview: Small text size.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_text_small.png) | ![Custom style preview: Normal text size.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_text_normal.png)
 
 Text and code size stylesheets, the default is around 12pt.
 
@@ -196,9 +196,9 @@ Text and code size stylesheets, the default is around 12pt.
 
 ### Indent
 
-| Quarter | Half |
-| --- | --- |
-| ![Custom style preview: Quarter-inch indent.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_indent_quarter.png) | ![Custom style preview: Half-inch indent.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_indent_half.png) |
+Quarter | Half
+--- | ---
+![Custom style preview: Quarter-inch indent.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_indent_quarter.png) | ![Custom style preview: Half-inch indent.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_indent_half.png)
 
 Paragrah indentation and justification stylesheets, there is no indent by
 default.
@@ -214,9 +214,9 @@ default.
 
 ### Spacing
 
-| Single | Double |
-| --- | --- |
-| ![Custom style preview: Single-height spacing.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_spacing_single.png) | ![Custom style preview: Double-height spacing.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_spacing_double.png) |
+Single | Double
+--- | ---
+![Custom style preview: Single-height spacing.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_spacing_single.png) | ![Custom style preview: Double-height spacing.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_spacing_double.png)
 
 Line height stylesheets, the default is around one-half inch.
 
@@ -231,9 +231,9 @@ Line height stylesheets, the default is around one-half inch.
 
 ### Column
 
-| Two | Three | Four |
-| --- | --- | --- |
-| ![Custom style preview: Two-column layout.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_column_two.png) | ![Custom style preview: Three-column layout.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_column_three.png) | ![Custom style preview: Four-column layout.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_column_four.png) |
+Two | Three | Four
+--- | --- | ---
+![Custom style preview: Two-column layout.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_column_two.png) | ![Custom style preview: Three-column layout.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_column_three.png) | ![Custom style preview: Four-column layout.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_column_four.png)
 
 Column splitting stylesheets, the default is full column.
 
@@ -267,9 +267,9 @@ Template for header and footer needs to be embedded in the settings.
 
 ### Webpage
 
-| Header | Footer |
-| --- | --- |
-| ![Headers style preview: Webpage header.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/headers_webpage_header.png) | ![Headers style preview: Webpage footer.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/headers_webpage_footer.png) |
+Header | Footer
+--- | ---
+![Headers style preview: Webpage header.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/headers_webpage_header.png) | ![Headers style preview: Webpage footer.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/headers_webpage_footer.png)
 
 Replace variable `$URL` to webpage link, `$TITLE` with document title.
 
@@ -282,9 +282,9 @@ Replace variable `$URL` to webpage link, `$TITLE` with document title.
 
 ### Homework
 
-| Header | Footer |
-| --- | --- |
-| ![Headers style preview: Homework header.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/headers_homework_header.png) | ![Headers style preview: Homework footer.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/headers_homework_footer.png) |
+Header | Footer
+--- | ---
+![Headers style preview: Homework header.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/headers_homework_header.png) | ![Headers style preview: Homework footer.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/headers_homework_footer.png)
 
 Replace variable `$SUBJECT` to student credential, `$IMAGE_BASE64` to school
 logo (10px height), `$TITLE` to document title.
