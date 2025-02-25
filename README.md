@@ -1,6 +1,6 @@
 # Markdown PDF Styles
 
-![VSCode Markdown PDF logo.](https://github.com/yzane/vscode-markdown-pdf/raw/master/images/icon.png)
+![The project logo.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/logo.png)
 
 Stylesheets for [VSCode Markdown PDF](https://github.com/yzane/vscode-markdown-pdf/).
 
@@ -29,7 +29,7 @@ project-wide preferences, which will override global settings.
 
 ### Report
 
-![Preset style preview: Classic report.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/preset_classic_report.png)
+![Preset style preview: Classic report.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/preset_classic_report.png)
 
 Replace variable `$TITLE` to report's title.
 
@@ -51,7 +51,7 @@ Lorem ipsum...
 
 ### Letter
 
-![Preset style preview: Classic letter.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/preset_classic_letter.png)
+![Preset style preview: Classic letter.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/preset_classic_letter.png)
 
 ```markdown
 ::: sender
@@ -73,7 +73,7 @@ Lorem ipsum...
 
 ### Resume
 
-![Preset style preview: Classic resume.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/preset_classic_resume.png)
+![Preset style preview: Classic resume.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/preset_classic_resume.png)
 
 ```markdown
 ::: name
@@ -95,7 +95,7 @@ Lorem ipsum...
 
 ### [IEEE](https://www.ieee.org/conferences/publishing/templates.html)
 
-![Preset style preview: Academic IEEE.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/preset_academic_ieee.png)
+![Preset style preview: Academic IEEE.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/preset_academic_ieee.png)
 
 IEEE style is an academic paper format with double column and serif font.
 
@@ -123,7 +123,7 @@ Lorem ipsum...
 
 ### [APA](https://apastyle.apa.org/style-grammar-guidelines/paper-format/)
 
-![Preset style preview: Academic APA.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/preset_academic_apa.png)
+![Preset style preview: Academic APA.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/preset_academic_apa.png)
 
 APA style is an academic paper format with sans serif font.
 
@@ -151,7 +151,7 @@ Awesome website
 
 ### Cheatsheet
 
-![Preset style preview: Cheatsheet.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/preset_others_cheatsheet.png)
+![Preset style preview: Cheatsheet.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/preset_others_cheatsheet.png)
 
 Keep as many content as possible with mini everything.
 
@@ -163,7 +163,7 @@ Only pick at maximum one in each category.
 
 Sans | Serif
 --- | ---
-![Custom style preview: Sans font family.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_font_sans.png) | ![Custom style preview: Serif font family.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_font_serif.png)
+![Custom style preview: Sans font family.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/custom_font_sans.png) | ![Custom style preview: Serif font family.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/custom_font_serif.png)
 
 Font family stylesheets with *Noto Sans/Serif* and *JetBrains Mono*, the default
 is system fonts.
@@ -181,7 +181,7 @@ is system fonts.
 
 Small | Normal
 --- | ---
-![Custom style preview: Small text size.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_text_small.png) | ![Custom style preview: Normal text size.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_text_normal.png)
+![Custom style preview: Small text size.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/custom_text_small.png) | ![Custom style preview: Normal text size.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/custom_text_normal.png)
 
 Text and code size stylesheets, the default is around 12pt.
 
@@ -198,7 +198,7 @@ Text and code size stylesheets, the default is around 12pt.
 
 Quarter | Half
 --- | ---
-![Custom style preview: Quarter-inch indent.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_indent_quarter.png) | ![Custom style preview: Half-inch indent.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_indent_half.png)
+![Custom style preview: Quarter-inch indent.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/custom_indent_quarter.png) | ![Custom style preview: Half-inch indent.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/custom_indent_half.png)
 
 Paragrah indentation and justification stylesheets, there is no indent by
 default.
@@ -216,7 +216,7 @@ default.
 
 Single | Double
 --- | ---
-![Custom style preview: Single-height spacing.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_spacing_single.png) | ![Custom style preview: Double-height spacing.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_spacing_double.png)
+![Custom style preview: Single-height spacing.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/custom_spacing_single.png) | ![Custom style preview: Double-height spacing.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/custom_spacing_double.png)
 
 Line height stylesheets, the default is around one-half inch.
 
@@ -233,7 +233,7 @@ Line height stylesheets, the default is around one-half inch.
 
 Two | Three | Four
 --- | --- | ---
-![Custom style preview: Two-column layout.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_column_two.png) | ![Custom style preview: Three-column layout.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_column_three.png) | ![Custom style preview: Four-column layout.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/custom_column_four.png)
+![Custom style preview: Two-column layout.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/custom_column_two.png) | ![Custom style preview: Three-column layout.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/custom_column_three.png) | ![Custom style preview: Four-column layout.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/custom_column_four.png)
 
 Column splitting stylesheets, the default is full column.
 
@@ -269,7 +269,7 @@ Template for header and footer needs to be embedded in the settings.
 
 Header | Footer
 --- | ---
-![Headers style preview: Webpage header.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/headers_webpage_header.png) | ![Headers style preview: Webpage footer.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/headers_webpage_footer.png)
+![Headers style preview: Webpage header.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/headers_webpage_header.png) | ![Headers style preview: Webpage footer.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/headers_webpage_footer.png)
 
 Replace variable `$URL` to webpage link, `$TITLE` with document title.
 
@@ -284,7 +284,7 @@ Replace variable `$URL` to webpage link, `$TITLE` with document title.
 
 Header | Footer
 --- | ---
-![Headers style preview: Homework header.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/headers_homework_header.png) | ![Headers style preview: Homework footer.](https://github.com/hendraanggrian/markdown-pdf-styles/raw/assets/headers_homework_footer.png)
+![Headers style preview: Homework header.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/headers_homework_header.png) | ![Headers style preview: Homework footer.](https://github.com/hanggrian/markdown-pdf-styles/raw/assets/headers_homework_footer.png)
 
 Replace variable `$SUBJECT` to student credential, `$IMAGE_BASE64` to school
 logo (10px height), `$TITLE` to document title.
