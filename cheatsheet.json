@@ -4,5 +4,5 @@
   "markdown-pdf.margin.bottom": "0.25in",
   "markdown-pdf.margin.right": "0.25in",
   "markdown-pdf.margin.left": "0.25in",
-  "markdown-pdf.displayHeaderFooter": false,
+  "markdown-pdf.displayHeaderFooter": false
 }

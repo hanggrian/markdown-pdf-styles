@@ -32,7 +32,8 @@ body {
 
   margin-top: 34px;
   margin-bottom: 24px;
-} .authors > p {
+}
+.authors > p {
   width: 175px;
   font-size: 9pt;
   text-align: center;
@@ -46,41 +47,56 @@ body {
   column-gap: 0.2in;
 
   margin-top: 18px;
-} .content > * {
+}
+.content > * {
   font-size: 10pt;
   line-height: 0.95;
-} .content > h1 {
+}
+.content > h1 {
   font-weight: normal;
   font-size: 24pt;
-} .content > h2 {
+}
+.content > h2 {
   font-weight: normal;
   font-size: 12pt;
   font-variant: small-caps;
   text-align: center;
-} .content > h3, h4, h5, h6 {
+}
+.content > h3,
+.content > h4,
+.content > h5,
+.content > h6 {
   font-style: italic;
   font-size: 10pt;
-} .content > small {
+}
+.content > small {
   font-size: 7pt;
-} .content > .hljs > code {
+}
+.content > .hljs > code {
 	font-family: 'Courier New', monospace;
   font-weight: normal;
   font-size: 8pt;
   line-height: 0.95;
-} .content > pre:not(.hljs), pre.hljs code > div {
+}
+.content > pre:not(.hljs),
+pre.hljs code > div {
 	padding: 2pt;
-} .content > pre:not(.hljs) {
+}
+.content > pre:not(.hljs) {
 	padding: 4pt;
   line-height: 0.95;
-} .content > p {
+}
+.content > p {
   text-align: justify;
   text-indent: 0.2in;
 
   margin-top: 0;
   margin-bottom: 0;
-} .content > p > img {
+}
+.content > p > img {
   margin-left: -0.2in;
-} .content > blockquote > p {
+}
+.content > blockquote > p {
   text-align: left;
   text-indent: 0in;
 }
@@ -96,18 +112,21 @@ body {
   counter-reset: list;
   display: table;
   padding-inline-start: 0px;
-} .references > ol > li {
+}
+.references > ol > li {
   font-size: 8pt;
   line-height: 9pt;
 
   counter-increment: list;
   display: table-row;
-} .references > ol > li:before {
+}
+.references > ol > li:before {
   text-align: right;
 
   content: "[" counter(list) "] ";
   display: table-cell;
   padding-right: 4px;
-} .references > ol > li:not(:last-child) {
+}
+.references > ol > li:not(:last-child) {
   margin-bottom: 2.5pt;
 }

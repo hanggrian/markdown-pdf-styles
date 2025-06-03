@@ -16,11 +16,17 @@ body {
   line-height: 2.0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Times New Roman', serif;
   font-weight: bold;
   font-size: 12pt;
-} h2 {
+}
+h2 {
   text-align: center;
 }
 
@@ -33,7 +39,8 @@ code {
   font-weight: normal;
   font-size: 10pt;
   line-height: 1.15;
-} pre.hljs code > div {
+}
+pre.hljs code > div {
 	padding: 2pt;
 }
 
@@ -92,11 +99,14 @@ blockquote > p {
 
 .figure > pre {
   margin-bottom: 0;
-} .figure > img {
+}
+.figure > img {
   margin-bottom: 0;
-} .figure > table {
+}
+.figure > table {
   margin-bottom: 0;
-} .figure > p {
+}
+.figure > p {
   font-size: 10pt;
   text-indent: 0;
 
